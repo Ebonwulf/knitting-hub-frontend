@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [patterns, setPatterns] = useState([]);
 
   const getPatterns = () => {
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/patterns')
+    fetch('http://localhost:8080/patterns')
       .then((res) => res.json())
       .then((json) => setPatterns(json))
       .catch((err) => console.log(err));

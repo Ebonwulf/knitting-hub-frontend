@@ -1,8 +1,9 @@
+@use '../styles/variables' as *;
 .home {
   background-image: url(../assets/images/knit-background.jpg);
   background-size: cover;
   font-size: 35px;
-  height: 100vh;
+  height: 100%;
   &__image {
     width: 50rem;
     height: 10rem;

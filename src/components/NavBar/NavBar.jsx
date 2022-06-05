@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div className='nav-bar'>
-      <Link className='nav-bar-menu__item' to='/'>
+      <Link className='nav-bar__item' to='/'>
         Home
       </Link>
 
-      <Link className='nav-bar-menu__item' to='/patterns'>
+      <Link className='nav-bar__item' to='/patterns'>
         Patterns
       </Link>
 
-      <Link className='nav-bar-menu__item' to='/new-pattern'>
+      <Link className='nav-bar__item' to='/new-pattern'>
         Add Pattern
       </Link>
     </div>

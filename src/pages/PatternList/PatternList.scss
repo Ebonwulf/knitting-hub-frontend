@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+
+.heading {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 36px;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}

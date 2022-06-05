@@ -1,0 +1,9 @@
+.home {
+  background-image: url(../assets/images/knit-pattern.jpg);
+  font-size: 30px;
+  height: 100vh;
+  &__image {
+    width: 35vw;
+    height: 15vh;
+  }
+}

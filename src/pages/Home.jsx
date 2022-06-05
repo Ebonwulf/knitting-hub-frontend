@@ -1,5 +1,5 @@
 import './Home.scss';
-import knitting from '../assets/images/knitting.png';
+import knitting from '../assets/images/knitting-heading.png';
 
 const Home = () => {
   return (

@@ -8,7 +8,7 @@ const PatternList = (props) => {
       <div className='container'>
         {props.patterns &&
           props.patterns.map((pattern) => (
-            <Pattern key={pattern.id} pattern={pattern} />
+            <Pattern key={pattern.patternId} pattern={pattern} />
           ))}
       </div>
     </>

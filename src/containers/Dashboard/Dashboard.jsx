@@ -4,7 +4,6 @@ import PatternList from '../../pages/PatternList/PatternList';
 import Home from '../../pages/Home';
 import NavBar from '../../components/NavBar/NavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Dashboard = () => {

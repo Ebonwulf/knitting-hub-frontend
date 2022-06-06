@@ -14,7 +14,7 @@ const PatternForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:8080/patterns', {
+    fetch('http://localhost:8080/pattern', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

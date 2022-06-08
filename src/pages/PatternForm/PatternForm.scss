@@ -59,4 +59,13 @@ $blue: rgb(144, 96, 255);
       box-shadow: inset 0px 1px 1px fadeout(black, 90%);
     }
   }
+
+  textarea {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.5em 0;
+    color: #141414;
+  }
 }

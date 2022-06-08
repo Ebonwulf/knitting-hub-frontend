@@ -1,1 +1,65 @@
 @use '../../styles/variables';
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.644);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+
+  &__back-button {
+    font-size: 1.6em;
+    background-color: rgba(137, 252, 172, 0.795);
+    border: 2px solid blueviolet;
+    border-radius: 6px;
+    margin: 0 8.5rem;
+  }
+
+  &__back-button:hover {
+    cursor: pointer;
+  }
+
+  &__form {
+    background-color: rgb(253, 247, 236);
+    border-radius: 5px;
+    height: 50%;
+  }
+
+  &__label {
+    font-size: 2em;
+  }
+  &__input {
+    margin: 2%;
+    padding: 5px 15px;
+    font-size: 18px;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    color: rgb(117, 2, 248);
+  }
+}
+
+h3 {
+  font-size: 2em;
+  margin: 5px;
+}
+
+label {
+  margin: 2%;
+  color: rgb(0, 0, 0);
+}
+
+.filters-checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#filters-checkboxes {
+  height: 20%;
+}

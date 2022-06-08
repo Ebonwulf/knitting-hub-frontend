@@ -11,7 +11,7 @@ const PatternForm = () => {
     patternDescription: '',
     pattern: '',
   });
-
+  console.log('' + pattern);
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern', {
@@ -70,7 +70,7 @@ const PatternForm = () => {
             setPattern({ ...pattern, patternDescription: e.target.value })
           }
         />
-        <input
+        <textarea
           type='text'
           placeholder='pattern'
           onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}

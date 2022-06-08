@@ -1,12 +1,34 @@
 @use '../../styles/variables' as *;
 
-.heading {
-  text-align: center;
-  margin: 50px 0;
-  font-size: 42px;
+.pattern-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__heading {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 42px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &__img {
+    width: 25rem;
+    height: 10rem;
+  }
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.search-bar__button {
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  padding: 0.2rem;
+  font-size: 1.2em;
+  background-color: rgba(137, 252, 172, 0.795);
+  margin-left: 2rem;
+}
+.search-bar__button:hover {
+  cursor: pointer;
 }

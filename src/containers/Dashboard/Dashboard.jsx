@@ -9,6 +9,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Dashboard = () => {
   const [patterns, setPatterns] = useState([]);
+  const [showSearch, setShowSearch] = useState(false);
+
+  const toggleSearch = () => {
+    console.log(showSearch);
+    setShowSearch(!showSearch);
+  };
 
   const getPatterns = () => {
     fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/patterns')
@@ -26,7 +32,16 @@ const Dashboard = () => {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/patterns' element={<PatternList patterns={patterns} />} />
+        <Route
+          path='/patterns'
+          element={
+            <PatternList
+              patterns={patterns}
+              showSearch={showSearch}
+              toggleSearch={toggleSearch}
+            />
+          }
+        />
         <Route path='/new-pattern' element={<PatternForm />} />
       </Routes>
       <Routes>

@@ -14,7 +14,7 @@ const PatternForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:8080/pattern', {
+    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

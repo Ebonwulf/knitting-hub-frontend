@@ -12,6 +12,7 @@
   right: 0;
   bottom: 0;
   z-index: 5;
+  padding-top: 5rem;
 
   &__back-button {
     font-size: 1.6em;
@@ -29,6 +30,7 @@
     background-color: rgb(253, 247, 236);
     border-radius: 5px;
     height: 50%;
+    padding: 1rem;
   }
 
   &__label {
@@ -58,6 +60,7 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  margin-bottom: 5rem;
 }
 
 #filters-checkboxes {

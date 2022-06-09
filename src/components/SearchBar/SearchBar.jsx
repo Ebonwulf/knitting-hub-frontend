@@ -1,8 +1,8 @@
 import './SearchBar.scss';
 
 const SearchBar = ({
-  searchTerm,
-  searchTermHandler,
+  searchText,
+  searchTextHandler,
   toggleSearch,
   needleSizeSearch,
   handleNeedleSearch,
@@ -20,8 +20,8 @@ const SearchBar = ({
         <input
           type='text'
           className='search-bar__input'
-          value={searchTerm}
-          onChange={searchTermHandler}
+          value={searchText}
+          onChange={searchTextHandler}
         />
 
         <h3>Filters</h3>

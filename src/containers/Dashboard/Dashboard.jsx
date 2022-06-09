@@ -10,10 +10,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const Dashboard = () => {
   const [patterns, setPatterns] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
+  const [searchText, setSearchText] = useState('');
 
   const toggleSearch = () => {
     console.log(showSearch);
     setShowSearch(!showSearch);
+  };
+
+  const searchTextHandler = (e) => {
+    const text = e.target.value;
+    setSearchText(text);
   };
 
   const getPatterns = () => {
@@ -39,6 +45,8 @@ const Dashboard = () => {
               patterns={patterns}
               showSearch={showSearch}
               toggleSearch={toggleSearch}
+              searchText={searchText}
+              searchTextHandler={searchTextHandler}
             />
           }
         />

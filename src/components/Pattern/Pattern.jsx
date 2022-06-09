@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Pattern = (props) => {
   const {
+    patternId,
     patternName,
     patternType,
     patternDifficulty,
@@ -11,10 +12,31 @@ const Pattern = (props) => {
     patternDescription,
   } = props.pattern;
 
+  const handleDelete = () => {
+    fetch(
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern/' + patternId,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((json) => console.log(json))
+      .catch((err) => console.log(err));
+    console.log('deleted');
+  };
+
   return (
     <>
       <div className='pattern'>
-        <h3>{patternName}</h3>
+        <div className='pattern__btn-div'>
+          <h3>{patternName}</h3>
+          <button onClick={handleDelete} className='pattern__btn'>
+            Del
+          </button>
+        </div>
         <h4>Pattern type: {patternType}</h4>
         <h5>Difficulty: {patternDifficulty}</h5>
         <h5>Wool type: {woolType}</h5>

@@ -5,8 +5,8 @@ import knittingLibrary from '../../assets/images/knitting-library.png';
 
 const PatternList = ({
   patterns,
-  searchTerm,
-  searchTermHandler,
+  searchText,
+  searchTextHandler,
   toggleSearch,
   needleSizeSearch,
   handleNeedleSearch,
@@ -19,7 +19,13 @@ const PatternList = ({
   return (
     <>
       <div className='pattern-list'>
-        {showSearch && <SearchBar toggleSearch={toggleSearch} />}
+        {showSearch && (
+          <SearchBar
+            toggleSearch={toggleSearch}
+            searchText={searchText}
+            searchTextHandler={searchTextHandler}
+          />
+        )}
         <img
           className='pattern-list__img'
           src={knittingLibrary}

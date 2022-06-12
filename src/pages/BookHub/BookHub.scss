@@ -1,0 +1,10 @@
+@use '../../styles/variables' as *;
+
+.book-hub {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../../assets/images/book-background.jpg);
+  background-size: cover;
+  color: azure;
+}

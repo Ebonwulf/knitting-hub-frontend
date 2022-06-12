@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PatternList from '../../pages/PatternList/PatternList';
-import Home from '../../pages/Home';
+import PatternHub from '../../pages/PatternHub/PatternHub';
 import PatternNavBar from '../../components/PatternNavBar/PatternNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
@@ -40,7 +40,7 @@ const Dashboard = () => {
     <Router>
       <PatternNavBar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/pattern-hub' element={<PatternHub />} />
         <Route
           path='/patterns'
           element={

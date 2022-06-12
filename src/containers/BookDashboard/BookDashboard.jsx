@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import BookList from '../../pages/BookList/BookList';
 import BookForm from '../../pages/BookForm/BookForm';
+import BookHub from '../../pages/BookHub/BookHub';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const BookDashboard = () => {
@@ -11,7 +12,7 @@ const BookDashboard = () => {
   const getBooks = () => {
     fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/books')
       .then((res) => res.json())
-      .then((json) => setPatterns(json))
+      .then((json) => setBooks(json))
       .catch((err) => console.log(err));
   };
 
@@ -37,7 +38,7 @@ const BookDashboard = () => {
     <Router>
       <BookNavBar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/book-hub' element={<BookHub />} />
         <Route
           path='/books'
           element={

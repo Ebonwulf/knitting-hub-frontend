@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+.pattern-hub {
+  background-image: url(../../assets/images/knit-background.jpg);
+  background-size: cover;
+  font-size: 35px;
+  height: 100%;
+  &__image {
+    width: 50rem;
+    height: 10rem;
+  }
+}

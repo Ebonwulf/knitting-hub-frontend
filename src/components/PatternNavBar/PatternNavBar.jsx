@@ -4,8 +4,8 @@ import '../NavBar/NavBar.scss';
 const PatternNavBar = () => {
   return (
     <div className='nav-bar'>
-      <Link className='nav-bar__item' to='/'>
-        Home
+      <Link className='nav-bar__item' to='/pattern-hub'>
+        Knitting Home
       </Link>
       <Link className='nav-bar__item' to='/patterns'>
         Patterns

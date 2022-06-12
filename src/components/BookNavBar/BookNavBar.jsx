@@ -4,8 +4,8 @@ import '../NavBar/NavBar.scss';
 const BookNavBar = () => {
   return (
     <div className='nav-bar'>
-      <Link className='nav-bar__item' to='/'>
-        Home
+      <Link className='nav-bar__item' to='/book-hub'>
+        Books Home
       </Link>
 
       <Link className='nav-bar__item' to='/books'>

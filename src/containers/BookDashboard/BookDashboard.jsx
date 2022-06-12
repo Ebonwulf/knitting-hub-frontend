@@ -1,25 +1,22 @@
 import { useState, useEffect } from 'react';
-import PatternList from '../../pages/PatternList/PatternList';
-import Home from '../../pages/Home';
-import NavBar from '../../components/NavBar/NavBar';
-import PatternForm from '../../pages/PatternForm/PatternForm';
-import PatternPage from '../../pages/PatternPage/PatternPage';
+import BookList from '../../pages/BookList/BookList';
+import BookForm from '../../pages/BookForm/BookForm';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const Dashboard = () => {
-  const [patterns, setPatterns] = useState([]);
+const BookDashboard = () => {
+  const [books, setBooks] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState('');
 
-  const getPatterns = () => {
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/patterns')
+  const getBooks = () => {
+    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/books')
       .then((res) => res.json())
       .then((json) => setPatterns(json))
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
-    getPatterns();
+    getBooks();
   }, []);
 
   const toggleSearch = () => {
@@ -32,8 +29,8 @@ const Dashboard = () => {
     setSearchText(text);
   };
 
-  const filteredPatterns = patterns.filter((pattern) => {
-    return pattern.patternName.toLowerCase().includes(searchText);
+  const filteredBooks = books.filter((book) => {
+    return book.bookTitle.toLowerCase().includes(searchText);
   });
 
   return (
@@ -42,23 +39,20 @@ const Dashboard = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route
-          path='/patterns'
+          path='/books'
           element={
-            <PatternList
+            <BookList
               showSearch={showSearch}
               toggleSearch={toggleSearch}
-              filteredPatterns={filteredPatterns}
+              filteredBooks={filteredBooks}
               searchTextHandler={searchTextHandler}
             />
           }
         />
-        <Route path='/new-pattern' element={<PatternForm />} />
-      </Routes>
-      <Routes>
-        <Route path='/pattern-page' element={<PatternPage />} />
+        <Route path='/new-book' element={<BookForm />} />
       </Routes>
     </Router>
   );
 };
 
-export default Dashboard;
+export default BookDashboard;

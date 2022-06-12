@@ -1,5 +1,6 @@
 import './BookList.scss';
 import Book from '../../components/Book/Book';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const BookList = ({ filteredBooks, toggleSearch, showSearch }) => {
   return (

@@ -8,12 +8,12 @@ const NavBar = () => {
         Home
       </Link>
 
-      <Link className='nav-bar__item' to='/patterns'>
-        Patterns
+      <Link className='nav-bar__item' to='/pattern-hub'>
+        Knitting Hub
       </Link>
 
-      <Link className='nav-bar__item' to='/new-pattern'>
-        Add Pattern
+      <Link className='nav-bar__item' to='/book-hub'>
+        Book library
       </Link>
     </div>
   );

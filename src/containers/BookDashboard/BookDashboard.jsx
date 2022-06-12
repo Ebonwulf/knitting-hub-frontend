@@ -3,6 +3,7 @@ import BookList from '../../pages/BookList/BookList';
 import BookForm from '../../pages/BookForm/BookForm';
 import BookHub from '../../pages/BookHub/BookHub';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BookNavBar from '../../components/BookNavBar/BookNavBar';
 
 const BookDashboard = () => {
   const [books, setBooks] = useState([]);

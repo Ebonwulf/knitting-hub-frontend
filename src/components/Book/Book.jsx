@@ -1,4 +1,5 @@
 import './Book.scss';
+import { Link } from 'react-router-dom';
 
 const Book = ({
   bookId,

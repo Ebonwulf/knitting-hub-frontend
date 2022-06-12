@@ -2,9 +2,15 @@ import './Home.scss';
 
 const Home = () => {
   return (
-    <div className='home'>
-      <h1>Welcome to Wolf's Knitting hub and Book library!</h1>
-    </div>
+    <>
+      <div className='home'>
+        <h1>
+          Welcome to Wolf's <br></br>
+          Knitting hub and <br></br>
+          Book library!
+        </h1>
+      </div>
+    </>
   );
 };
 

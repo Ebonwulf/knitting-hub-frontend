@@ -1,5 +1,7 @@
 @use '../styles/variables' as *;
 .home {
   font-size: 35px;
-  height: 100%;
+  height: 95vh;
+  background-image: url(../assets/images/Shutterstock_1585685068.jpg);
+  background-size: cover;
 }

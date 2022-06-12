@@ -5,6 +5,7 @@ import Home from '../../pages/Home';
 import NavBar from '../../components/NavBar/NavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
+import BookForm from '../../pages/BookForm/BookForm';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -57,6 +58,9 @@ const Dashboard = () => {
       </Routes>
       <Routes>
         <Route path='/pattern-page' element={<PatternPage />} />
+      </Routes>
+      <Routes>
+        <Route path='/new-book' element={<BookForm />} />
       </Routes>
     </Router>
   );

@@ -1,1 +1,36 @@
 @use '../../styles/variables' as *;
+
+.book {
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  background-image: url(../../assets/images/tile-background.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  text-align: left;
+
+  &__btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    width: 1.5rem;
+    margin: 0.3rem 0;
+    background-color: rgba(137, 252, 172, 0.733);
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+  }
+
+  h3 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.book:hover {
+  cursor: pointer;
+}

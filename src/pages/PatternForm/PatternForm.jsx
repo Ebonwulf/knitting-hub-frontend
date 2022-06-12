@@ -11,7 +11,6 @@ const PatternForm = () => {
     patternDescription: '',
     pattern: '',
   });
-  console.log('' + pattern);
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern', {
@@ -27,7 +26,7 @@ const PatternForm = () => {
     e.target.reset();
   };
   return (
-    <div className='login-form'>
+    <div className='pattern-form'>
       <h2>Add a new pattern</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -75,7 +74,7 @@ const PatternForm = () => {
           placeholder='pattern'
           onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}
         />
-        <button type='submit' className='login-form__button'>
+        <button type='submit' className='pattern-form__button'>
           Submit
         </button>
       </form>

@@ -2,7 +2,7 @@
 
 $blue: rgb(144, 96, 255);
 
-.login-form {
+.pattern-form {
   width: 40%;
   min-width: 320px;
   max-width: 475px;
@@ -44,7 +44,7 @@ $blue: rgb(144, 96, 255);
     }
   }
 
-  .login-form__button {
+  .pattern-form__button {
     display: inline-block;
     background: $blue;
     border: 1px solid black;

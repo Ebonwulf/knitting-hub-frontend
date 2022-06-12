@@ -12,16 +12,6 @@ const Dashboard = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState('');
 
-  const toggleSearch = () => {
-    console.log(showSearch);
-    setShowSearch(!showSearch);
-  };
-
-  const searchTextHandler = (e) => {
-    const text = e.target.value;
-    setSearchText(text);
-  };
-
   const getPatterns = () => {
     fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/patterns')
       .then((res) => res.json())
@@ -33,6 +23,20 @@ const Dashboard = () => {
     getPatterns();
   }, []);
 
+  const toggleSearch = () => {
+    console.log(showSearch);
+    setShowSearch(!showSearch);
+  };
+
+  const searchTextHandler = (e) => {
+    const text = e.target.value;
+    setSearchText(text);
+  };
+
+  const filteredPatterns = patterns.filter((pattern) => {
+    return pattern.name.toLowerCase().includes(searchText);
+  });
+
   return (
     <Router>
       <NavBar />
@@ -42,10 +46,9 @@ const Dashboard = () => {
           path='/patterns'
           element={
             <PatternList
-              patterns={patterns}
               showSearch={showSearch}
               toggleSearch={toggleSearch}
-              searchText={searchText}
+              filteredPatterns={filteredPatterns}
               searchTextHandler={searchTextHandler}
             />
           }

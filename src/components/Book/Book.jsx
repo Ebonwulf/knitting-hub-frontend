@@ -1,9 +1,12 @@
 import './Book.scss';
 
-const Book = (props) => {
-  const { bookId, bookTitle, bookGenre, bookAuthor, bookDescription } =
-    props.book;
-
+const Book = ({
+  bookId,
+  bookTitle,
+  bookGenre,
+  bookAuthor,
+  bookDescription,
+}) => {
   const handleDelete = () => {
     fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/book/' + bookId, {
       method: 'DELETE',

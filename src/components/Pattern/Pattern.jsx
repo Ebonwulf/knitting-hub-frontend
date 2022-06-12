@@ -1,17 +1,15 @@
 import './Pattern.scss';
 import { Link } from 'react-router-dom';
 
-const Pattern = (props) => {
-  const {
-    patternId,
-    patternName,
-    patternType,
-    patternDifficulty,
-    woolType,
-    needleSize,
-    patternDescription,
-  } = props.pattern;
-
+const Pattern = ({
+  patternId,
+  patternName,
+  patternType,
+  patternDifficulty,
+  woolType,
+  needleSize,
+  patternDescription,
+}) => {
   const handleDelete = () => {
     fetch(
       'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern/' + patternId,

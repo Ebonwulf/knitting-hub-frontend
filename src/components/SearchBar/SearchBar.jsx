@@ -1,8 +1,6 @@
 import './SearchBar.scss';
 
 const SearchBar = ({
-  searchText,
-  searchTextHandler,
   toggleSearch,
   needleSizeSearch,
   handleNeedleSearch,
@@ -17,12 +15,7 @@ const SearchBar = ({
         <label htmlFor='' className='search-bar__label'>
           Search for a pattern
         </label>
-        <input
-          type='text'
-          className='search-bar__input'
-          value={searchText}
-          onChange={searchTextHandler}
-        />
+        <input type='text' className='search-bar__input' />
 
         <h3>Filters</h3>
         <div className='filters-checkboxes'>

@@ -4,9 +4,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import knittingLibrary from '../../assets/images/knitting-library.png';
 
 const PatternList = ({
-  patterns,
-  searchText,
-  searchTextHandler,
+  filteredPatterns,
   toggleSearch,
   needleSizeSearch,
   handleNeedleSearch,
@@ -19,13 +17,7 @@ const PatternList = ({
   return (
     <>
       <div className='pattern-list'>
-        {showSearch && (
-          <SearchBar
-            toggleSearch={toggleSearch}
-            searchText={searchText}
-            searchTextHandler={searchTextHandler}
-          />
-        )}
+        {showSearch && <SearchBar toggleSearch={toggleSearch} />}
         <img
           className='pattern-list__img'
           src={knittingLibrary}
@@ -37,9 +29,17 @@ const PatternList = ({
         </div>
       </div>
       <div className='pattern-list__container'>
-        {patterns &&
-          patterns.map((pattern) => (
-            <Pattern key={pattern.patternName} pattern={pattern} />
+        {filteredPatterns &&
+          filteredPatterns.map((pattern) => (
+            <Pattern
+              key={pattern.patternName}
+              patternName={pattern.patternName}
+              patterId={pattern.patterId}
+              patternType={pattern.patternType}
+              patternDifficulty={pattern.patternDifficulty}
+              woolType={pattern.woolType}
+              needleSize={pattern.needleSize}
+            />
           ))}
       </div>
     </>

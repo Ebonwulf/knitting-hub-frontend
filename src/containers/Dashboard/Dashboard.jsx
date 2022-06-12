@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PatternList from '../../pages/PatternList/PatternList';
 import Home from '../../pages/Home';
-import NavBar from '../../components/NavBar/NavBar';
+import PatternNavBar from '../../components/PatternNavBar/PatternNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -38,7 +38,7 @@ const Dashboard = () => {
 
   return (
     <Router>
-      <NavBar />
+      <PatternNavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route

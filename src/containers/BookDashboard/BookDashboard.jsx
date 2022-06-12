@@ -35,7 +35,7 @@ const BookDashboard = () => {
 
   return (
     <Router>
-      <NavBar />
+      <BookNavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route

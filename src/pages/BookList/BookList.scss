@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__heading {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 42px;
+  }
+
+  &__cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &__img {
+    width: 25rem;
+    height: 10rem;
+  }
+}

@@ -37,20 +37,28 @@ const PatternForm = () => {
               setPattern({ ...pattern, patternName: e.target.value })
             }
           />
-          <input
-            type='text'
-            placeholder='pattern type'
-            onInput={(e) =>
+          <select
+            className='pattern-form__dropdown'
+            onSelect={(e) =>
               setPattern({ ...pattern, patternType: e.target.value })
             }
-          />
-          <input
-            type='text'
-            placeholder='pattern difficulty'
-            onInput={(e) =>
+          >
+            <option>Pattern type</option>
+            <option value='Knitting'>Knitting</option>
+            <option value='Crochet'>Crochet</option>
+          </select>
+          <select
+            className='pattern-form__dropdown'
+            onSelect={(e) =>
               setPattern({ ...pattern, patternDifficulty: e.target.value })
             }
-          />
+          >
+            <option>Difficulty</option>
+            <option value='Beginner'>Beginner</option>
+            <option value='Intermediate'>Intermediate</option>
+            <option value='Expert'>Expert</option>
+          </select>
+
           <input
             type='text'
             placeholder='wool type'

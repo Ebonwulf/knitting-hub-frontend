@@ -6,7 +6,13 @@ const BookList = ({ filteredBooks, toggleSearch, showSearch }) => {
   return (
     <div className='book-list-page'>
       <div className='book-list'>
-        {showSearch && <SearchBar toggleSearch={toggleSearch} />}
+        {showSearch && (
+          <SearchBar
+            toggleSearch={toggleSearch}
+            searchBoxTitle={'Search for books'}
+            libraryName={'Book'}
+          />
+        )}
         <h2 className='book-list__heading'>Book Library</h2>
         <div className='search-bar__button' onClick={toggleSearch}>
           Book Finder

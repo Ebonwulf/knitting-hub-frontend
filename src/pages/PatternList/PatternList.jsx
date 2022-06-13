@@ -6,18 +6,20 @@ import knittingLibrary from '../../assets/images/knitting-library.png';
 const PatternList = ({
   filteredPatterns,
   toggleSearch,
-  needleSizeSearch,
-  handleNeedleSearch,
-  woolTypeSearch,
-  handleWoolTypeSearch,
-  difficultySearch,
-  handleDifficultySearch,
   showSearch,
+  displayCount,
 }) => {
   return (
     <div className='pattern-list-page'>
       <div className='pattern-list'>
-        {showSearch && <SearchBar toggleSearch={toggleSearch} />}
+        {showSearch && (
+          <SearchBar
+            toggleSearch={toggleSearch}
+            searchBoxTitle={'Search for patterns'}
+            libraryName={'Pattern'}
+            displayCount={displayCount}
+          />
+        )}
         <img
           className='pattern-list__img'
           src={knittingLibrary}

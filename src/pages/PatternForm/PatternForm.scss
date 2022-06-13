@@ -43,7 +43,7 @@
     border: none;
     border-bottom: 1px solid #acacac;
     padding-bottom: 1.25em;
-    color: #141414;
+    color: $form-detail;
     &:focus {
       outline: none;
     }
@@ -65,12 +65,24 @@
     }
   }
 
+  &__dropdown {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.5em 0;
+    color: $form-detail;
+    border: none;
+    border-bottom: 1px solid #acacac;
+    background: none;
+  }
+
   textarea {
     display: block;
     margin: auto auto;
     width: 100%;
     margin-bottom: 2em;
     padding: 0.5em 0;
-    color: #141414;
+    color: $form-detail;
   }
 }

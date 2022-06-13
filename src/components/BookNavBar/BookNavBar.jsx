@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import '../NavBar/NavBar.scss';
 
-const BookNavBar = () => {
+const BookNavBar = ({ refreshPage }) => {
   return (
     <div className='nav-bar'>
-      <Link className='nav-bar__item' to='/'>
+      <Link className='nav-bar__item' to='/' onClick={refreshPage}>
         Home Page
       </Link>
-      <Link className='nav-bar__item' to='/book-hub'>
+      <Link className='nav-bar__item' to='/book-hub' onClick={refreshPage}>
         Books Home
       </Link>
 

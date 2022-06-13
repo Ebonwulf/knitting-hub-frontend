@@ -26,58 +26,62 @@ const PatternForm = () => {
     e.target.reset();
   };
   return (
-    <div className='pattern-form'>
-      <h2>Add a new pattern</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          placeholder='pattern name'
-          onInput={(e) =>
-            setPattern({ ...pattern, patternName: e.target.value })
-          }
-        />
-        <input
-          type='text'
-          placeholder='pattern type'
-          onInput={(e) =>
-            setPattern({ ...pattern, patternType: e.target.value })
-          }
-        />
-        <input
-          type='text'
-          placeholder='pattern difficulty'
-          onInput={(e) =>
-            setPattern({ ...pattern, patternDifficulty: e.target.value })
-          }
-        />
-        <input
-          type='text'
-          placeholder='wool type'
-          onInput={(e) => setPattern({ ...pattern, woolType: e.target.value })}
-        />
-        <input
-          type='text'
-          placeholder='needle size'
-          onInput={(e) =>
-            setPattern({ ...pattern, needleSize: e.target.value })
-          }
-        />
-        <input
-          type='text'
-          placeholder='pattern description'
-          onInput={(e) =>
-            setPattern({ ...pattern, patternDescription: e.target.value })
-          }
-        />
-        <textarea
-          type='text'
-          placeholder='pattern'
-          onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}
-        />
-        <button type='submit' className='pattern-form__button'>
-          Submit
-        </button>
-      </form>
+    <div className='pattern-form-page'>
+      <div className='pattern-form'>
+        <h2>Add a new pattern</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type='text'
+            placeholder='pattern name'
+            onInput={(e) =>
+              setPattern({ ...pattern, patternName: e.target.value })
+            }
+          />
+          <input
+            type='text'
+            placeholder='pattern type'
+            onInput={(e) =>
+              setPattern({ ...pattern, patternType: e.target.value })
+            }
+          />
+          <input
+            type='text'
+            placeholder='pattern difficulty'
+            onInput={(e) =>
+              setPattern({ ...pattern, patternDifficulty: e.target.value })
+            }
+          />
+          <input
+            type='text'
+            placeholder='wool type'
+            onInput={(e) =>
+              setPattern({ ...pattern, woolType: e.target.value })
+            }
+          />
+          <input
+            type='text'
+            placeholder='needle size'
+            onInput={(e) =>
+              setPattern({ ...pattern, needleSize: e.target.value })
+            }
+          />
+          <input
+            type='text'
+            placeholder='pattern description'
+            onInput={(e) =>
+              setPattern({ ...pattern, patternDescription: e.target.value })
+            }
+          />
+          <textarea
+            type='text'
+            placeholder='pattern'
+            onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}
+          />
+          <button type='submit' className='pattern-form__button'>
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

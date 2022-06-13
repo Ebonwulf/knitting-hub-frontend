@@ -1,5 +1,11 @@
 @use '../../styles/variables' as *;
 
+.pattern-list-page {
+  background-image: url(../../assets/images/knit-pattern.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
 .pattern-list {
   display: flex;
   justify-content: center;

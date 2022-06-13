@@ -5,7 +5,7 @@ import BookHub from '../../pages/BookHub/BookHub';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookNavBar from '../../components/BookNavBar/BookNavBar';
 
-const BookDashboard = () => {
+const BookDashboard = ({ refreshPage }) => {
   const [books, setBooks] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState('');
@@ -37,7 +37,7 @@ const BookDashboard = () => {
 
   return (
     <Router>
-      <BookNavBar />
+      <BookNavBar refreshPage={refreshPage} />
       <Routes>
         <Route path='/book-hub' element={<BookHub />} />
         <Route

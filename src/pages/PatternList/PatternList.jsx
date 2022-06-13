@@ -15,7 +15,7 @@ const PatternList = ({
   showSearch,
 }) => {
   return (
-    <>
+    <div className='pattern-list-page'>
       <div className='pattern-list'>
         {showSearch && <SearchBar toggleSearch={toggleSearch} />}
         <img
@@ -42,7 +42,7 @@ const PatternList = ({
             />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ import PatternPage from '../../pages/PatternPage/PatternPage';
 import Home from '../../pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const PatternDashboard = () => {
+const PatternDashboard = ({ refreshPage }) => {
   const [patterns, setPatterns] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
   const [searchText, setSearchText] = useState('');
@@ -39,7 +39,7 @@ const PatternDashboard = () => {
 
   return (
     <Router>
-      <PatternNavBar />
+      <PatternNavBar refreshPage={refreshPage} />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/pattern-hub' element={<PatternHub />} />

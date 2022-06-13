@@ -5,16 +5,18 @@ import PatternDashboard from '../../containers/PatternDashboard/PatternDashboard
 const Main = () => {
   const changeNavBar = () => {
     switch (window.location.pathname) {
+      case '/':
+        return <Dashboard refreshPage={refreshPage} />;
       case '/book-hub':
         return <BookDashboard refreshPage={refreshPage} />;
       case '/books':
-        return <BookDashboard />;
+        return <BookDashboard refreshPage={refreshPage} />;
       case '/new-book':
         return <BookDashboard />;
       case '/pattern-hub':
         return <PatternDashboard refreshPage={refreshPage} />;
       case '/patterns':
-        return <PatternDashboard />;
+        return <PatternDashboard refreshPage={refreshPage} />;
       case '/new-pattern':
         return <PatternDashboard />;
       default:

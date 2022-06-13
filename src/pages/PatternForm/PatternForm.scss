@@ -1,7 +1,5 @@
 @use '../../styles/variables' as *;
 
-$blue: rgb(144, 96, 255);
-
 .pattern-form-page {
   background-image: url(../../assets/images/knit-pattern.jpg);
   background-size: cover;
@@ -29,7 +27,7 @@ $blue: rgb(144, 96, 255);
     color: black;
     font-size: 1.6em;
     display: block;
-    background: rgb(137, 252, 172);
+    background: $accent-color;
     width: 100%;
     padding: 0.75em 1em 0.75em 1.5em;
     margin: 0;

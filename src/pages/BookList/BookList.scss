@@ -1,5 +1,11 @@
 @use '../../styles/variables' as *;
 
+.book-list-page {
+  background-image: url(../../assets/images/book-list-background.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
 .book-list {
   display: flex;
   justify-content: center;
@@ -7,7 +13,8 @@
   &__heading {
     text-align: center;
     margin: 2rem 0;
-    font-size: 42px;
+    margin-left: 3rem;
+    font-size: 52px;
   }
 
   &__cont {

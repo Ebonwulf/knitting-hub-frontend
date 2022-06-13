@@ -4,7 +4,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 
 const BookList = ({ filteredBooks, toggleSearch, showSearch }) => {
   return (
-    <>
+    <div className='book-list-page'>
       <div className='book-list'>
         {showSearch && <SearchBar toggleSearch={toggleSearch} />}
         <h2 className='book-list__heading'>Book Library</h2>
@@ -25,7 +25,7 @@ const BookList = ({ filteredBooks, toggleSearch, showSearch }) => {
             ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

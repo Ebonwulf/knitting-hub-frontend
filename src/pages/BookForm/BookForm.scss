@@ -1,1 +1,76 @@
 @use '../../styles/variables' as *;
+
+.book-form-page {
+  background-image: url(../../assets/images/mike-tinnion-3ym6i13Y9LU-unsplash.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+.book-form {
+  width: 40%;
+  min-width: 320px;
+  max-width: 475px;
+  background: rgb(253, 253, 253);
+  margin: 7rem auto;
+  border: 1px solid darken(grey, 5%);
+  border-radius: 30px;
+
+  form {
+    display: block;
+    width: 100%;
+    padding: 2em;
+  }
+
+  h2 {
+    width: 100%;
+    color: black;
+    font-size: 1.6em;
+    display: block;
+    background: $accent-color;
+    width: 100%;
+    padding: 0.75em 1em 0.75em 1.5em;
+    margin: 0;
+    border-radius: 30px;
+  }
+
+  input {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.5em 0;
+    border: none;
+    border-bottom: 1px solid #acacac;
+    padding-bottom: 1.25em;
+    color: #141414;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .book-form__button {
+    display: inline-block;
+    background: $blue;
+    border: 1px solid black;
+    padding: 0.5em 2em;
+    margin-right: 0.5em;
+    font-size: 18px;
+    &:hover {
+      background: lighten($blue, 15%);
+    }
+    &:active {
+      background: $blue;
+      box-shadow: inset 0px 1px 1px fadeout(black, 90%);
+    }
+  }
+
+  textarea {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.5em 0;
+    color: #141414;
+  }
+}

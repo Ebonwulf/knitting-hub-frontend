@@ -11,7 +11,7 @@ const BookNavBar = ({ refreshPage }) => {
         Books Home
       </Link>
 
-      <Link className='nav-bar__item' to='/books'>
+      <Link className='nav-bar__item' to='/books' onClick={refreshPage}>
         Books
       </Link>
 

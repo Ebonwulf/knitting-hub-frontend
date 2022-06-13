@@ -1,4 +1,4 @@
-@use '../../styles/variables';
+@use '../../styles/variables' as *;
 
 .search-bar {
   display: flex;
@@ -16,7 +16,7 @@
 
   &__back-button {
     font-size: 1.6em;
-    background-color: rgba(137, 252, 172, 0.795);
+    background-color: $accent-color;
     border: 2px solid blueviolet;
     border-radius: 6px;
     margin: 0 8.5rem;

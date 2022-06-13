@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1641beb3.css",
+    "main.js": "/static/js/main.5249db64.js",
+    "static/js/787.ace8371c.chunk.js": "/static/js/787.ace8371c.chunk.js",
+    "static/media/knit-pattern.jpg": "/static/media/knit-pattern.adc101095e04753257c6.jpg",
+    "static/media/knitting-heading.png": "/static/media/knitting-heading.aee3b0839f45bbb09f37.png",
+    "static/media/book-list-background.jpg": "/static/media/book-list-background.aaf1322b63571149ce54.jpg",
+    "static/media/Shutterstock_1585685068.jpg": "/static/media/Shutterstock_1585685068.5f467cac7100b952d43d.jpg",
+    "static/media/knit-background.jpg": "/static/media/knit-background.9f5745bd14b3c5200428.jpg",
+    "static/media/book-tile.jpg": "/static/media/book-tile.0b7c6a7baacdcc1b7f5e.jpg",
+    "static/media/knitting-library.png": "/static/media/knitting-library.7c76c06d2e77b4a252ad.png",
+    "static/media/book-background.jpg": "/static/media/book-background.17fd312f08d54b70a9bd.jpg",
+    "static/media/mike-tinnion-3ym6i13Y9LU-unsplash.jpg": "/static/media/mike-tinnion-3ym6i13Y9LU-unsplash.eadec87f422886409395.jpg",
+    "static/media/tile-background.jpg": "/static/media/tile-background.e0c93ce2894c4316a6d2.jpg",
+    "index.html": "/index.html",
+    "main.1641beb3.css.map": "/static/css/main.1641beb3.css.map",
+    "main.5249db64.js.map": "/static/js/main.5249db64.js.map",
+    "787.ace8371c.chunk.js.map": "/static/js/787.ace8371c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1641beb3.css",
+    "static/js/main.5249db64.js"
+  ]
+}

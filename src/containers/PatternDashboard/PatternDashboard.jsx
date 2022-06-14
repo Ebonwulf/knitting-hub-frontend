@@ -5,7 +5,7 @@ import PatternNavBar from '../../components/PatternNavBar/PatternNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
 import Home from '../../pages/Home';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const PatternDashboard = ({ refreshPage }) => {
   const [patterns, setPatterns] = useState([]);
@@ -39,7 +39,7 @@ const PatternDashboard = ({ refreshPage }) => {
 
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <PatternNavBar refreshPage={refreshPage} />
         <Routes>
           <Route path='/' element={<Home />} />

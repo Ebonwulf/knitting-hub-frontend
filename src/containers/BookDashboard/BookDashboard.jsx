@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import BookList from '../../pages/BookList/BookList';
 import BookForm from '../../pages/BookForm/BookForm';
 import BookHub from '../../pages/BookHub/BookHub';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookNavBar from '../../components/BookNavBar/BookNavBar';
 
 const BookDashboard = ({ refreshPage }) => {
@@ -37,7 +37,7 @@ const BookDashboard = ({ refreshPage }) => {
 
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <BookNavBar refreshPage={refreshPage} />
         <Routes>
           <Route path='/book-hub' element={<BookHub />} />

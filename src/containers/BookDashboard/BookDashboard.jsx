@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import BookList from '../../pages/BookList/BookList';
 import BookForm from '../../pages/BookForm/BookForm';
 import BookHub from '../../pages/BookHub/BookHub';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookNavBar from '../../components/BookNavBar/BookNavBar';
 
 const BookDashboard = ({ refreshPage }) => {
@@ -37,22 +37,24 @@ const BookDashboard = ({ refreshPage }) => {
 
   return (
     <>
-      <BookNavBar refreshPage={refreshPage} />
-      <Routes>
-        <Route path='/book-hub' element={<BookHub />} />
-        <Route
-          path='/books'
-          element={
-            <BookList
-              showSearch={showSearch}
-              toggleSearch={toggleSearch}
-              filteredBooks={filteredBooks}
-              searchTextHandler={searchTextHandler}
-            />
-          }
-        />
-        <Route path='/new-book' element={<BookForm />} />
-      </Routes>
+      <Router>
+        <BookNavBar refreshPage={refreshPage} />
+        <Routes>
+          <Route path='/book-hub' element={<BookHub />} />
+          <Route
+            path='/books'
+            element={
+              <BookList
+                showSearch={showSearch}
+                toggleSearch={toggleSearch}
+                filteredBooks={filteredBooks}
+                searchTextHandler={searchTextHandler}
+              />
+            }
+          />
+          <Route path='/new-book' element={<BookForm />} />
+        </Routes>
+      </Router>
     </>
   );
 };

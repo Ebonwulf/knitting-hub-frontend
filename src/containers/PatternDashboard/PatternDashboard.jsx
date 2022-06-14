@@ -5,7 +5,7 @@ import PatternNavBar from '../../components/PatternNavBar/PatternNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
 import Home from '../../pages/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 const PatternDashboard = ({ refreshPage }) => {
   const [patterns, setPatterns] = useState([]);

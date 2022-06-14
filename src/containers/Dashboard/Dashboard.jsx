@@ -1,7 +1,7 @@
 import BookHub from '../../pages/BookHub/BookHub';
 import PatternHub from '../../pages/PatternHub/PatternHub';
 import NavBar from '../../components/NavBar/NavBar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../../pages/Home';
 
 const Dashboard = ({ refreshPage }) => {

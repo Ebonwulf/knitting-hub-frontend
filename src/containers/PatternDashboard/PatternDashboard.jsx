@@ -13,7 +13,9 @@ const PatternDashboard = ({ refreshPage }) => {
   const [searchText, setSearchText] = useState('');
 
   const getPatterns = () => {
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/patterns')
+    fetch(
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/patterns'
+    )
       .then((res) => res.json())
       .then((json) => setPatterns(json))
       .catch((err) => console.log(err));

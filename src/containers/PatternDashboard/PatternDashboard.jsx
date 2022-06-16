@@ -4,7 +4,6 @@ import PatternHub from '../../pages/PatternHub/PatternHub';
 import PatternNavBar from '../../components/PatternNavBar/PatternNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
-import Home from '../../pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const PatternDashboard = ({ refreshPage }) => {
@@ -44,7 +43,6 @@ const PatternDashboard = ({ refreshPage }) => {
       <Router basename={process.env.PUBLIC_URL}>
         <PatternNavBar refreshPage={refreshPage} />
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path='/pattern-hub' element={<PatternHub />} />
           <Route
             path='/patterns'

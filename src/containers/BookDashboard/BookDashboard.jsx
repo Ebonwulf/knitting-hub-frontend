@@ -11,7 +11,9 @@ const BookDashboard = ({ refreshPage }) => {
   const [searchText, setSearchText] = useState('');
 
   const getBooks = () => {
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/books')
+    fetch(
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/books'
+    )
       .then((res) => res.json())
       .then((json) => setBooks(json))
       .catch((err) => console.log(err));

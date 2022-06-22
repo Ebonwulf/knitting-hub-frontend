@@ -51,6 +51,7 @@ const BookDashboard = ({ refreshPage }) => {
                 toggleSearch={toggleSearch}
                 filteredBooks={filteredBooks}
                 searchTextHandler={searchTextHandler}
+                searchResultCount={filteredBooks.length}
               />
             }
           />

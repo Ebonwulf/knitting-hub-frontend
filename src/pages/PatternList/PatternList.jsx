@@ -38,7 +38,7 @@ const PatternList = ({
             <Pattern
               key={pattern.patternName}
               patternName={pattern.patternName}
-              patterId={pattern.patterId}
+              patternId={pattern.patternId}
               patternType={pattern.patternType}
               patternDifficulty={pattern.patternDifficulty}
               woolType={pattern.woolType}

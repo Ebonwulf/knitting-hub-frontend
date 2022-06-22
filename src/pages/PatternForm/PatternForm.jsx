@@ -13,13 +13,16 @@ const PatternForm = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(pattern),
-    })
+    fetch(
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/pattern',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(pattern),
+      }
+    )
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
@@ -37,26 +40,51 @@ const PatternForm = () => {
               setPattern({ ...pattern, patternName: e.target.value })
             }
           />
-          <select
-            className='pattern-form__dropdown'
-            onSelect={(e) =>
-              setPattern({ ...pattern, patternType: e.target.value })
-            }
-          >
+          <select className='pattern-form__dropdown'>
             <option>Pattern type</option>
-            <option value='Knitting'>Knitting</option>
-            <option value='Crochet'>Crochet</option>
+            <option
+              value='Knitting'
+              onSelect={(e) =>
+                setPattern({ ...pattern, patternType: e.target.value })
+              }
+            >
+              Knitting
+            </option>
+            <option
+              value='Crochet'
+              onSelect={(e) =>
+                setPattern({ ...pattern, patternType: e.target.value })
+              }
+            >
+              Crochet
+            </option>
           </select>
-          <select
-            className='pattern-form__dropdown'
-            onSelect={(e) =>
-              setPattern({ ...pattern, patternDifficulty: e.target.value })
-            }
-          >
+          <select className='pattern-form__dropdown'>
             <option>Difficulty</option>
-            <option value='Beginner'>Beginner</option>
-            <option value='Intermediate'>Intermediate</option>
-            <option value='Expert'>Expert</option>
+            <option
+              value='Beginner'
+              onSelect={(e) =>
+                setPattern({ ...pattern, patternDifficulty: e.target.value })
+              }
+            >
+              Beginner
+            </option>
+            <option
+              value='Intermediate'
+              onSelect={(e) =>
+                setPattern({ ...pattern, patternDifficulty: e.target.value })
+              }
+            >
+              Intermediate
+            </option>
+            <option
+              value='Expert'
+              onSelect={(e) =>
+                setPattern({ ...pattern, patternDifficulty: e.target.value })
+              }
+            >
+              Expert
+            </option>
           </select>
 
           <input

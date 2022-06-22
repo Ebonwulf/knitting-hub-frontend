@@ -12,7 +12,8 @@ const Pattern = ({
 }) => {
   const handleDelete = () => {
     fetch(
-      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/pattern/' + patternId,
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/pattern/' +
+        patternId,
       {
         method: 'DELETE',
         headers: {

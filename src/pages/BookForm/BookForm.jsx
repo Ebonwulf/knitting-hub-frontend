@@ -11,13 +11,16 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/book', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(book),
-    })
+    fetch(
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/book',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(book),
+      }
+    )
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((err) => console.log(err));

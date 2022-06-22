@@ -9,12 +9,16 @@ const Book = ({
   bookDescription,
 }) => {
   const handleDelete = () => {
-    fetch('https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/book/' + bookId, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    fetch(
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/book/' +
+        bookId,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
       .then((response) => response.json())
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
@@ -29,7 +33,7 @@ const Book = ({
           Del
         </button>
       </div>
-      <h3>Author: {bookAuthor}</h3>
+      <h4>Author: {bookAuthor}</h4>
       <h4>Genre: {bookGenre}</h4>
       <p>Description: {bookDescription}</p>
       <Link to='/book-page'>Go to full book description</Link>

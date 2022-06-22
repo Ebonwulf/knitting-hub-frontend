@@ -4,6 +4,10 @@ import BookDashboard from './containers/BookDashboard/BookDashboard';
 import PatternDashboard from './containers/PatternDashboard/PatternDashboard';
 
 function App() {
+  const refreshPage = () => {
+    window.location.refresh(false);
+  };
+
   const changeNavBar = () => {
     switch (window.location.pathname) {
       case '/knitting-hub-frontend/':
@@ -23,10 +27,6 @@ function App() {
       default:
         return <Dashboard refreshPage={refreshPage} />;
     }
-  };
-
-  const refreshPage = () => {
-    window.location.refresh(false);
   };
 
   let navBar = changeNavBar();

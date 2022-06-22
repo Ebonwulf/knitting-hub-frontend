@@ -10,10 +10,10 @@ const PatternNavBar = ({ refreshPage }) => {
       <Link className='nav-bar__item' to='/pattern-hub' onClick={refreshPage}>
         Knitting Home
       </Link>
-      <Link className='nav-bar__item' to='/patterns'>
+      <Link className='nav-bar__item' to='/patterns' onClick={refreshPage}>
         Patterns
       </Link>
-      <Link className='nav-bar__item' to='/new-pattern'>
+      <Link className='nav-bar__item' to='/new-pattern' onClick={refreshPage}>
         Add Pattern
       </Link>
     </div>

@@ -7,7 +7,8 @@ const PatternList = ({
   filteredPatterns,
   toggleSearch,
   showSearch,
-  displayCount,
+  searchTextHandler,
+  searchResultCount,
 }) => {
   return (
     <div className='pattern-list-page'>
@@ -17,7 +18,8 @@ const PatternList = ({
             toggleSearch={toggleSearch}
             searchBoxTitle={'Search for patterns'}
             libraryName={'Pattern'}
-            displayCount={displayCount}
+            searchTextHandler={searchTextHandler}
+            searchResultCount={searchResultCount}
           />
         )}
         <img

@@ -30,7 +30,7 @@ const PatternDashboard = ({ refreshPage }) => {
   };
 
   const searchTextHandler = (e) => {
-    const text = e.target.value;
+    const text = e.target.value.toLowerCase();
     setSearchText(text);
   };
 
@@ -52,6 +52,7 @@ const PatternDashboard = ({ refreshPage }) => {
                 toggleSearch={toggleSearch}
                 filteredPatterns={filteredPatterns}
                 searchTextHandler={searchTextHandler}
+                searchResultCount={filteredPatterns.length}
               />
             }
           />

@@ -1,6 +1,26 @@
 @use '../styles/variables' as *;
 .home {
   font-size: 35px;
-  height: 95vh;
+  height: 79vh;
   background: none;
+  display: flex;
+  justify-content: space-between;
+
+  &__knitting-page {
+    width: 30%;
+    margin: 10rem 10rem;
+    border: 1px solid $accent-color;
+    border-radius: 10px;
+    background-image: url(../assets/images/knit-background.jpg);
+    background-size: cover;
+  }
+
+  &__book-page {
+    width: 30%;
+    margin: 10rem 10rem;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    background-image: url(../assets/images/spaceWolf.jpg);
+    background-size: cover;
+  }
 }

@@ -7,6 +7,7 @@ const Book = ({
   bookGenre,
   bookAuthor,
   bookDescription,
+  refreshPage,
 }) => {
   const handleDelete = () => {
     fetch(
@@ -23,6 +24,7 @@ const Book = ({
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
     console.log('deleted');
+    refreshPage();
   };
 
   return (

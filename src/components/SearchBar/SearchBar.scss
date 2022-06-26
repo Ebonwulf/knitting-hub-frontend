@@ -16,8 +16,8 @@
 
   &__back-button {
     font-size: 1.6em;
-    background-color: $accent-color;
-    border: 2px solid blueviolet;
+    background-color: $secondary-color;
+    border: 2px solid $accent-color;
     border-radius: 6px;
     margin: 1rem 8.5rem;
     width: 10rem;
@@ -25,10 +25,16 @@
 
   &__back-button:hover {
     cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 5px $shadow-color;
+  }
+  &__back-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 5px $shadow-color;
   }
 
   &__form {
-    background-color: rgb(253, 247, 236);
+    background-color: $main-color;
     border-radius: 5px;
     height: 40%;
     margin: 3rem;
@@ -45,9 +51,8 @@
     margin: 1rem;
     padding: 5px 5px;
     font-size: 18px;
-    border: 2px solid blueviolet;
+    border: 2px solid $accent-color;
     border-radius: 10px;
-    color: rgb(117, 2, 248);
     width: 20rem;
   }
 }

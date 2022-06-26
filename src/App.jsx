@@ -8,7 +8,7 @@ function App() {
     window.location.refresh(false);
   };
 
-  const changeNavBar = () => {
+  const changeDashboard = () => {
     switch (window.location.pathname) {
       case '/knitting-hub-frontend/':
         return <Dashboard refreshPage={refreshPage} />;
@@ -23,14 +23,14 @@ function App() {
       case '/knitting-hub-frontend/patterns':
         return <PatternDashboard refreshPage={refreshPage} />;
       case '/knitting-hub-frontend/new-pattern':
-        return <PatternDashboard />;
+        return <PatternDashboard refreshPage={refreshPage} />;
       default:
         return <Dashboard refreshPage={refreshPage} />;
     }
   };
 
-  let navBar = changeNavBar();
-  return <div className='App'>{navBar}</div>;
+  let dashboard = changeDashboard();
+  return <div className='App'>{dashboard}</div>;
 }
 
 export default App;

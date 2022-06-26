@@ -1,11 +1,13 @@
 @use '../../styles/variables' as *;
 
 .nav-bar {
+  height: 6rem;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: $secondary-color;
+  border-bottom: 1px solid $accent-color;
 
   &__item {
     text-decoration: none;

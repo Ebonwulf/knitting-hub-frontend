@@ -27,11 +27,13 @@
     color: black;
     font-size: 1.6em;
     display: block;
-    background: $accent-color;
+    background: $secondary-color;
     width: 100%;
     padding: 0.75em 1em 0.75em 1.5em;
     margin: 0;
-    border-radius: 30px;
+    border: 1px solid $accent-color;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
   }
 
   input {

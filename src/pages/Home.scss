@@ -1,26 +1,36 @@
 @use '../styles/variables' as *;
+
 .home {
-  font-size: 35px;
-  height: 79vh;
+  height: 89vh;
   background: none;
   display: flex;
   justify-content: space-between;
+  font-size: 3em;
 
-  &__knitting-page {
+  &__page {
     width: 30%;
     margin: 10rem 10rem;
     border: 1px solid $accent-color;
     border-radius: 10px;
-    background-image: url(../assets/images/knit-background.jpg);
     background-size: cover;
+    text-decoration: none;
+    color: black;
+  }
+
+  &__page:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px $shadow-color;
+  }
+  &__page:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px $shadow-color;
+  }
+
+  &__knit-page {
+    background-image: url(../assets/images/knit-background.jpg);
   }
 
   &__book-page {
-    width: 30%;
-    margin: 10rem 10rem;
-    border: 1px solid blueviolet;
-    border-radius: 10px;
     background-image: url(../assets/images/spaceWolf.jpg);
-    background-size: cover;
   }
 }

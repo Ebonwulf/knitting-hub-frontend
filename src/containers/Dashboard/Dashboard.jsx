@@ -8,9 +8,9 @@ const Dashboard = ({ refreshPage }) => {
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
-        <NavBar refreshPage={refreshPage} />
+        <NavBar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home refreshPage={refreshPage} />} />
           <Route path='/pattern-hub' element={<PatternHub />} />
           <Route path='/book-hub' element={<BookHub />} />
         </Routes>

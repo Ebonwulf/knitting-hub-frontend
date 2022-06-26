@@ -26,15 +26,3 @@
     height: 10rem;
   }
 }
-
-.search-bar__button {
-  border: 1px solid blueviolet;
-  border-radius: 5px;
-  padding: 0.2rem;
-  font-size: 1.2em;
-  background-color: $accent-color;
-  margin-left: 8rem;
-}
-.search-bar__button:hover {
-  cursor: pointer;
-}

@@ -1,13 +1,13 @@
 @use '../../styles/variables' as *;
 
-.pattern-form-page {
+.form-page {
   background-image: url(../../assets/images/knit-pattern.jpg);
   background-size: cover;
   height: 100vh;
   padding-top: 5rem;
 }
 
-.pattern-form {
+.form {
   width: 40%;
   min-width: 320px;
   max-width: 475px;
@@ -16,13 +16,7 @@
   border: 1px solid darken(grey, 5%);
   border-radius: 30px;
 
-  form {
-    display: block;
-    width: 100%;
-    padding: 2em;
-  }
-
-  h2 {
+  &__heading {
     width: 100%;
     color: black;
     font-size: 1.6em;
@@ -36,33 +30,19 @@
     border-top-left-radius: 30px;
   }
 
-  input {
-    display: block;
-    margin: auto auto;
-    width: 100%;
-    margin-bottom: 2em;
-    padding: 0.5em 0;
-    border: none;
-    border-bottom: 1px solid #acacac;
-    padding-bottom: 1.25em;
-    color: $form-detail;
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .pattern-form__button {
+  &__form-button {
     display: inline-block;
-    background: $blue;
+    background: lighten($accent-color, 15%);
     border: 1px solid black;
     padding: 0.5em 2em;
     margin-right: 0.5em;
     font-size: 18px;
+    border-radius: 5px;
     &:hover {
-      background: lighten($blue, 15%);
+      background: lighten($accent-color, 30%);
     }
     &:active {
-      background: $blue;
+      background: $accent-color;
       box-shadow: inset 0px 1px 1px fadeout(black, 90%);
     }
   }
@@ -78,13 +58,34 @@
     border-bottom: 1px solid #acacac;
     background: none;
   }
+}
 
-  textarea {
-    display: block;
-    margin: auto auto;
-    width: 100%;
-    margin-bottom: 2em;
-    padding: 0.5em 0;
-    color: $form-detail;
+form {
+  display: block;
+  width: 100%;
+  padding: 2em;
+}
+
+input {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0.5em 0;
+  border: none;
+  border-bottom: 1px solid #acacac;
+  padding-bottom: 1.25em;
+  color: $form-detail;
+  &:focus {
+    outline: none;
   }
+}
+
+textarea {
+  display: block;
+  margin: auto auto;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 0.5em 0;
+  color: $form-detail;
 }

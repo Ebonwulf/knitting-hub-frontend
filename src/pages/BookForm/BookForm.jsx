@@ -28,8 +28,8 @@ const BookForm = () => {
   };
   return (
     <div className='book-form-page'>
-      <div className='book-form'>
-        <h2>Add a new book</h2>
+      <div className='form'>
+        <h2 className='form__heading'>Add a new book</h2>
         <form onSubmit={handleSubmit}>
           <input
             type='text'
@@ -53,7 +53,7 @@ const BookForm = () => {
               setBook({ ...book, bookDescription: e.target.value })
             }
           />
-          <button type='submit' className='book-form__button'>
+          <button type='submit' className='form__form-button'>
             Submit
           </button>
         </form>

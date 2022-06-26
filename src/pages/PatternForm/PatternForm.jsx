@@ -29,9 +29,9 @@ const PatternForm = () => {
     e.target.reset();
   };
   return (
-    <div className='pattern-form-page'>
-      <div className='pattern-form'>
-        <h2>Add a new pattern</h2>
+    <div className='form-page'>
+      <div className='form'>
+        <h2 className='form__heading'>Add a new pattern</h2>
         <form onSubmit={handleSubmit}>
           <input
             type='text'
@@ -40,7 +40,7 @@ const PatternForm = () => {
               setPattern({ ...pattern, patternName: e.target.value })
             }
           />
-          <select className='pattern-form__dropdown'>
+          <select className='form__dropdown'>
             <option>Pattern type</option>
             <option
               value='Knitting'
@@ -59,7 +59,7 @@ const PatternForm = () => {
               Crochet
             </option>
           </select>
-          <select className='pattern-form__dropdown'>
+          <select className='form__dropdown'>
             <option>Difficulty</option>
             <option
               value='Beginner'
@@ -113,7 +113,7 @@ const PatternForm = () => {
             placeholder='pattern'
             onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}
           />
-          <button type='submit' className='pattern-form__button'>
+          <button type='submit' className='form__form-button'>
             Submit
           </button>
         </form>

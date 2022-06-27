@@ -1,4 +1,3 @@
-import './BookForm.scss';
 import { useState } from 'react';
 
 const BookForm = () => {

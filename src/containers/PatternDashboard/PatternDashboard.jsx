@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PatternList from '../../pages/PatternList/PatternList';
 import PatternHub from '../../pages/PatternHub/PatternHub';
-import PatternNavBar from '../../components/PatternNavBar/PatternNavBar';
+import LibraryNavBar from '../../components/LibraryNavBar/LibraryNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
 import PatternPage from '../../pages/PatternPage/PatternPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -41,7 +41,16 @@ const PatternDashboard = ({ refreshPage }) => {
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
-        <PatternNavBar refreshPage={refreshPage} />
+        <LibraryNavBar
+          refreshPage={refreshPage}
+          hubName='Patterns Home'
+          libraryName='Patterns'
+          addPage='Add Pattern'
+          homePath='/'
+          libraryPath='/patterns'
+          hubPath='/pattern-hub'
+          addPath='/new-pattern'
+        />
         <Routes>
           <Route path='/pattern-hub' element={<PatternHub />} />
           <Route

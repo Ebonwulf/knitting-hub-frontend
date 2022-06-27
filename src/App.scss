@@ -13,9 +13,9 @@
   font-size: 1.2em;
   background-color: $secondary-color;
   margin-left: 8rem;
+  cursor: pointer;
 }
 .search-bar__button:hover {
-  cursor: pointer;
   transform: translateY(-1px);
   box-shadow: 0 5px 10px $shadow-color;
 }
@@ -31,4 +31,11 @@ button:hover {
 button:active {
   transform: translateY(1px);
   box-shadow: 0 5px 5px $shadow-color;
+}
+
+.book-form-page {
+  background-image: url(./assets/images/mike-tinnion-3ym6i13Y9LU-unsplash.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding-top: 5rem;
 }

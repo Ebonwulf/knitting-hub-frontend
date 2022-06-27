@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/knitting-hub-frontend/static/css/main.98628dec.css",
-    "main.js": "/knitting-hub-frontend/static/js/main.1a848e3e.js",
+    "main.css": "/knitting-hub-frontend/static/css/main.04e617ba.css",
+    "main.js": "/knitting-hub-frontend/static/js/main.9297c0f3.js",
     "static/js/787.ace8371c.chunk.js": "/knitting-hub-frontend/static/js/787.ace8371c.chunk.js",
     "static/media/knit-pattern.jpg": "/knitting-hub-frontend/static/media/knit-pattern.adc101095e04753257c6.jpg",
     "static/media/knitting-heading.png": "/knitting-hub-frontend/static/media/knitting-heading.aee3b0839f45bbb09f37.png",
     "static/media/knit-background.jpg": "/knitting-hub-frontend/static/media/knit-background.9f5745bd14b3c5200428.jpg",
-    "static/media/book-tile.jpg": "/knitting-hub-frontend/static/media/book-tile.0b7c6a7baacdcc1b7f5e.jpg",
     "static/media/knitting-library.png": "/knitting-hub-frontend/static/media/knitting-library.7c76c06d2e77b4a252ad.png",
+    "static/media/LemanRuss.jpg": "/knitting-hub-frontend/static/media/LemanRuss.2b7dc957747cb7dfc02f.jpg",
     "static/media/mike-tinnion-3ym6i13Y9LU-unsplash.jpg": "/knitting-hub-frontend/static/media/mike-tinnion-3ym6i13Y9LU-unsplash.eadec87f422886409395.jpg",
-    "static/media/CoraxBattleNew.jpg": "/knitting-hub-frontend/static/media/CoraxBattleNew.e7bc34353e686e1e7889.jpg",
+    "static/media/corax.jpg": "/knitting-hub-frontend/static/media/corax.4bef4974401e9356c5d4.jpg",
     "static/media/tile-background.jpg": "/knitting-hub-frontend/static/media/tile-background.e0c93ce2894c4316a6d2.jpg",
-    "static/media/spaceWolf.jpg": "/knitting-hub-frontend/static/media/spaceWolf.f78183f1a5848408cf44.jpg",
+    "static/media/space-marine.jpg": "/knitting-hub-frontend/static/media/space-marine.c9b0ee3a5240c312f2fd.jpg",
     "index.html": "/knitting-hub-frontend/index.html",
-    "main.98628dec.css.map": "/knitting-hub-frontend/static/css/main.98628dec.css.map",
-    "main.1a848e3e.js.map": "/knitting-hub-frontend/static/js/main.1a848e3e.js.map",
+    "main.04e617ba.css.map": "/knitting-hub-frontend/static/css/main.04e617ba.css.map",
+    "main.9297c0f3.js.map": "/knitting-hub-frontend/static/js/main.9297c0f3.js.map",
     "787.ace8371c.chunk.js.map": "/knitting-hub-frontend/static/js/787.ace8371c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98628dec.css",
-    "static/js/main.1a848e3e.js"
+    "static/css/main.04e617ba.css",
+    "static/js/main.9297c0f3.js"
   ]
 }

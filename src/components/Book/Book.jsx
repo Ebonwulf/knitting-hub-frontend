@@ -1,5 +1,6 @@
 import './Book.scss';
-import { Link } from 'react-router-dom';
+import DescriptionPage from '../../pages/DescriptionPage/DescriptionPage';
+import { useState } from 'react';
 
 const Book = ({
   bookId,
@@ -7,8 +8,11 @@ const Book = ({
   bookGenre,
   bookAuthor,
   bookDescription,
+  bookBlurb,
   refreshPage,
 }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
   const handleDelete = () => {
     fetch(
       'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/book/' +
@@ -27,6 +31,11 @@ const Book = ({
     refreshPage();
   };
 
+  const toggleDetails = () => {
+    console.log(showDetails);
+    setShowDetails(!showDetails);
+  };
+
   return (
     <div className='book'>
       <div className='book__btn-container'>
@@ -38,7 +47,18 @@ const Book = ({
       <h4>Author: {bookAuthor}</h4>
       <h4>Genre: {bookGenre}</h4>
       <p>Description: {bookDescription}</p>
-      <Link to='/book-page'>Go to full book description</Link>
+      <div className='book__link' onClick={toggleDetails}>
+        Go to full book description
+        {showDetails && (
+          <DescriptionPage
+            toggleDetails={toggleDetails}
+            bookAuthor={bookAuthor}
+            bookBlurb={bookBlurb}
+            bookTitle={bookTitle}
+            bookDescription={bookDescription}
+          />
+        )}
+      </div>
     </div>
   );
 };

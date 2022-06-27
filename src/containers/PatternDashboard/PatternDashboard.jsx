@@ -3,7 +3,7 @@ import PatternList from '../../pages/PatternList/PatternList';
 import PatternHub from '../../pages/PatternHub/PatternHub';
 import LibraryNavBar from '../../components/LibraryNavBar/LibraryNavBar';
 import PatternForm from '../../pages/PatternForm/PatternForm';
-import PatternPage from '../../pages/PatternPage/PatternPage';
+import DescriptionPage from '../../pages/DescriptionPage/DescriptionPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const PatternDashboard = ({ refreshPage }) => {
@@ -68,7 +68,10 @@ const PatternDashboard = ({ refreshPage }) => {
           <Route path='/new-pattern' element={<PatternForm />} />
         </Routes>
         <Routes>
-          <Route path='/pattern-page' element={<PatternPage />} />
+          <Route
+            path='/pattern-page'
+            element={<DescriptionPage filteredPatterns={filteredPatterns} />}
+          />
         </Routes>
       </Router>
     </>

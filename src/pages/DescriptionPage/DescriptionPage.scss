@@ -1,0 +1,50 @@
+@use '../../styles/variables' as *;
+
+.description {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.644);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  padding-top: 5rem;
+
+  &__div {
+    background-color: $main-color;
+    border-radius: 5px;
+    height: 70%;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__title {
+    color: black;
+  }
+
+  &__back-button {
+    font-size: 1.6em;
+    background-color: $secondary-color;
+    border: 2px solid $accent-color;
+    border-radius: 6px;
+    margin: 1rem 8.5rem;
+    width: 10rem;
+  }
+
+  &__back-button:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 5px $shadow-color;
+  }
+  &__back-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 5px $shadow-color;
+  }
+}

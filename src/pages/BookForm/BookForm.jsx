@@ -6,6 +6,7 @@ const BookForm = () => {
     bookGenre: '',
     bookAuthor: '',
     bookDescription: '',
+    bookBlurb: '',
   });
 
   const handleSubmit = (e) => {
@@ -45,12 +46,17 @@ const BookForm = () => {
             placeholder='book author'
             onInput={(e) => setBook({ ...book, bookAuthor: e.target.value })}
           />
-          <textarea
+          <input
             type='text'
-            placeholder='description'
+            placeholder='brief description'
             onInput={(e) =>
               setBook({ ...book, bookDescription: e.target.value })
             }
+          />
+          <textarea
+            type='text'
+            placeholder='Blurb'
+            onInput={(e) => setBook({ ...book, bookBlurb: e.target.value })}
           />
           <button type='submit' className='form__form-button'>
             Submit

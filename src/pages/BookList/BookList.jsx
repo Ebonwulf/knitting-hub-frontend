@@ -37,6 +37,7 @@ const BookList = ({
               bookGenre={book.bookGenre}
               bookAuthor={book.bookAuthor}
               bookDescription={book.bookDescription}
+              bookBlub={book.bookBlub}
               refreshPage={refreshPage}
             />
           ))}

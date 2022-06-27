@@ -1,5 +1,5 @@
 import './Book.scss';
-import DescriptionPage from '../../pages/DescriptionPage/DescriptionPage';
+import FullDescription from '../FullDescription/FullDescription';
 import { useState } from 'react';
 
 const Book = ({
@@ -50,7 +50,7 @@ const Book = ({
       <div className='book__link' onClick={toggleDetails}>
         Go to full book description
         {showDetails && (
-          <DescriptionPage
+          <FullDescription
             toggleDetails={toggleDetails}
             bookAuthor={bookAuthor}
             bookBlurb={bookBlurb}

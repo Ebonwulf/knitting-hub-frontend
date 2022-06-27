@@ -13,6 +13,7 @@
   bottom: 0;
   z-index: 5;
   padding-top: 5rem;
+  color: black;
 
   &__div {
     background-color: $main-color;
@@ -23,10 +24,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
-
-  &__title {
-    color: black;
   }
 
   &__back-button {

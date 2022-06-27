@@ -4,7 +4,6 @@ import BookForm from '../../pages/BookForm/BookForm';
 import BookHub from '../../pages/BookHub/BookHub';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LibraryNavBar from '../../components/LibraryNavBar/LibraryNavBar.jsx';
-import DescriptionPage from '../../pages/DescriptionPage/DescriptionPage';
 
 const BookDashboard = ({ refreshPage }) => {
   const [books, setBooks] = useState([]);
@@ -66,12 +65,6 @@ const BookDashboard = ({ refreshPage }) => {
             }
           />
           <Route path='/new-book' element={<BookForm />} />
-        </Routes>
-        <Routes>
-          <Route
-            path='/description-page'
-            element={<DescriptionPage filteredBooks={filteredBooks} />}
-          />
         </Routes>
       </Router>
     </>

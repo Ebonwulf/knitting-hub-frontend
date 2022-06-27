@@ -4,10 +4,9 @@
   width: 90%;
   margin: 20px auto;
   padding: 10px;
-  background-image: url(../../assets/images/LemanRuss.jpg);
-  background-size: cover;
   border-radius: 15px;
   text-align: left;
+  background-color: rgba(253, 247, 236, 0.575);
 
   &__btn-container {
     display: flex;
@@ -34,11 +33,10 @@
   p {
     font-size: 22px;
     font-weight: 500;
-    color: whitesmoke;
   }
 
   &__link {
-    color: whitesmoke;
     cursor: pointer;
+    text-decoration: underline;
   }
 }

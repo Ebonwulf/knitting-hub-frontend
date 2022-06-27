@@ -5,7 +5,7 @@ import PatternDashboard from './containers/PatternDashboard/PatternDashboard';
 
 function App() {
   const refreshPage = () => {
-    window.location.refresh(false);
+    window.location.refresh(true);
   };
 
   const changeDashboard = () => {

@@ -1,7 +1,8 @@
 @use '../../styles/variables' as *;
 
 .book-list-page {
-  height: 100vh;
+  background-image: url(../../assets/images/545316.jpg);
+  background-size: cover;
 }
 
 .book-list {

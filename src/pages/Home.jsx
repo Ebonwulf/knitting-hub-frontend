@@ -1,5 +1,6 @@
 import './Home.scss';
 import { Link } from 'react-router-dom';
+import knittingHeading from '../assets/images/knitting-heading.png';
 
 const Home = ({ refreshPage }) => {
   return (
@@ -10,7 +11,7 @@ const Home = ({ refreshPage }) => {
           to='/patterns'
           onClick={refreshPage}
         >
-          Knitting library
+          <img src={knittingHeading} alt='Knitting' /> library
         </Link>
         <Link
           className='home__page home__book-page'

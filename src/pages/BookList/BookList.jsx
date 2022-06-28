@@ -24,6 +24,7 @@ const BookList = ({
             libraryName={'Book'}
             searchTextHandler={searchTextHandler}
             searchResultCount={searchResultCount}
+            itemName='Search by book title'
           />
         )}
         <div className='search-bar__button' onClick={toggleSearch}>

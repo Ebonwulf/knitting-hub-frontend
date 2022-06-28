@@ -6,6 +6,7 @@ const Search = ({
   libraryName,
   searchTextHandler,
   searchResultCount,
+  itemName,
 }) => {
   const searchResults =
     searchResultCount === 1
@@ -22,6 +23,7 @@ const Search = ({
         <input
           type='text'
           className='search-bar__input'
+          placeholder={itemName}
           onChange={searchTextHandler}
         />
 

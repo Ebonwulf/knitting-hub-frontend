@@ -20,6 +20,7 @@ const PatternList = ({
             libraryName={'Pattern'}
             searchTextHandler={searchTextHandler}
             searchResultCount={searchResultCount}
+            itemName='Search by pattern name'
           />
         )}
         <img

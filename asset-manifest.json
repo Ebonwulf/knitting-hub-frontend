@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/knitting-hub-frontend/static/css/main.6e8f2f7c.css",
-    "main.js": "/knitting-hub-frontend/static/js/main.3fa37560.js",
+    "main.css": "/knitting-hub-frontend/static/css/main.773214a7.css",
+    "main.js": "/knitting-hub-frontend/static/js/main.c93fc099.js",
     "static/js/787.ace8371c.chunk.js": "/knitting-hub-frontend/static/js/787.ace8371c.chunk.js",
     "static/media/knit-pattern.jpg": "/knitting-hub-frontend/static/media/knit-pattern.adc101095e04753257c6.jpg",
     "static/media/knit-background.jpg": "/knitting-hub-frontend/static/media/knit-background.9f5745bd14b3c5200428.jpg",
@@ -10,12 +10,12 @@
     "static/media/tile-background.jpg": "/knitting-hub-frontend/static/media/tile-background.e0c93ce2894c4316a6d2.jpg",
     "static/media/space-marine.jpg": "/knitting-hub-frontend/static/media/space-marine.c9b0ee3a5240c312f2fd.jpg",
     "index.html": "/knitting-hub-frontend/index.html",
-    "main.6e8f2f7c.css.map": "/knitting-hub-frontend/static/css/main.6e8f2f7c.css.map",
-    "main.3fa37560.js.map": "/knitting-hub-frontend/static/js/main.3fa37560.js.map",
+    "main.773214a7.css.map": "/knitting-hub-frontend/static/css/main.773214a7.css.map",
+    "main.c93fc099.js.map": "/knitting-hub-frontend/static/js/main.c93fc099.js.map",
     "787.ace8371c.chunk.js.map": "/knitting-hub-frontend/static/js/787.ace8371c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e8f2f7c.css",
-    "static/js/main.3fa37560.js"
+    "static/css/main.773214a7.css",
+    "static/js/main.c93fc099.js"
   ]
 }

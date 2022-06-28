@@ -1,0 +1,50 @@
+@use '../../styles/variables' as *;
+
+.update-form {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.644);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  padding-top: 5rem;
+
+  &__form {
+    background-color: $main-color;
+    border-radius: 5px;
+    height: 40%;
+    margin: 3rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btns-div {
+    display: flex;
+    text-align: center;
+  }
+  &__back-button {
+    font-size: 1.6em;
+    background-color: $secondary-color;
+    border: 2px solid $accent-color;
+    border-radius: 6px;
+    margin: 1rem 3rem;
+    width: 10rem;
+  }
+
+  &__button {
+    font-size: 1.6em;
+    background-color: $secondary-color;
+    border: 2px solid $accent-color;
+    border-radius: 6px;
+    margin: 1rem 3rem;
+    width: 10rem;
+  }
+}

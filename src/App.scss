@@ -6,24 +6,6 @@
   background-color: $main-color;
 }
 
-.search-bar__button {
-  border: 1px solid $accent-color;
-  border-radius: 5px;
-  padding: 0.2rem;
-  font-size: 1.2em;
-  background-color: $secondary-color;
-  margin-left: 8rem;
-  cursor: pointer;
-}
-.search-bar__button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px $shadow-color;
-}
-.search-bar__button:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 5px $shadow-color;
-}
-
 button:hover {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px $shadow-color;
@@ -31,11 +13,4 @@ button:hover {
 button:active {
   transform: translateY(1px);
   box-shadow: 0 5px 5px $shadow-color;
-}
-
-.book-form-page {
-  background-image: url(./assets/images/LemanRuss.jpg);
-  background-size: cover;
-  height: 89vh;
-  padding-top: 5rem;
 }

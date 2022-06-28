@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+
+.book-form-page {
+  background-image: url(./assets/images/LemanRuss.jpg);
+  background-size: cover;
+  height: 89vh;
+  padding-top: 5rem;
+}

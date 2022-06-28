@@ -44,6 +44,7 @@ const PatternList = ({
               patternDifficulty={pattern.patternDifficulty}
               woolType={pattern.woolType}
               needleSize={pattern.needleSize}
+              pattern={pattern.pattern}
             />
           ))}
       </div>

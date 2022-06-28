@@ -1,4 +1,5 @@
 import './SearchBar.scss';
+import Button from '../../components/Button/Button';
 
 const Search = ({
   toggleSearch,
@@ -27,9 +28,8 @@ const Search = ({
           onChange={searchTextHandler}
         />
 
-        <div className='search-bar__back-button' onClick={toggleSearch}>
-          Back
-        </div>
+        <Button onClickType={toggleSearch} buttonText='Back' />
+
         <p className='library-count'>
           Number of {libraryName}'s : {searchResults}
         </p>

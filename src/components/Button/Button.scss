@@ -1,0 +1,22 @@
+@use '../../styles/variables' as *;
+
+.button {
+  border: 1px solid $accent-color;
+  border-radius: 5px;
+  padding: 0.2rem;
+  font-size: 0.9em;
+  background-color: $secondary-color;
+  margin-left: 3rem;
+  cursor: pointer;
+  width: 3.2rem;
+  height: 2rem;
+  text-align: center;
+}
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px $shadow-color;
+}
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 5px $shadow-color;
+}

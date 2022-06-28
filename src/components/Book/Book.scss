@@ -8,19 +8,6 @@
   text-align: left;
   background-color: rgba(253, 247, 236, 0.575);
 
-  &__btn-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__btn {
-    width: 1.5rem;
-    margin: 0.3rem 0;
-    background-color: $secondary-color;
-    border: 1px solid $accent-color;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
   h2 {
     font-size: 32px;
     margin: 0;
@@ -35,8 +22,13 @@
     font-weight: 500;
   }
 
+  &__btn-box {
+    display: flex;
+  }
+
   &__link {
     cursor: pointer;
     text-decoration: underline;
+    display: flex;
   }
 }

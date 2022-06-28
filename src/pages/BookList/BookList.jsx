@@ -1,6 +1,7 @@
 import './BookList.scss';
 import Book from '../../components/Book/Book';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import Button from '../../components/Button/Button';
 
 const BookList = ({
   filteredBooks,
@@ -10,10 +11,6 @@ const BookList = ({
   searchResultCount,
   refreshPage,
 }) => {
-  const handleRefresh = () => {
-    window.location.refresh(true);
-  };
-
   return (
     <div className='book-list-page'>
       <div className='book-list'>
@@ -27,13 +24,11 @@ const BookList = ({
             itemName='Search by book title'
           />
         )}
-        <div className='search-bar__button' onClick={toggleSearch}>
-          Book Finder
-        </div>
-        <h2 className='book-list__heading'>Warhammer 30K Library</h2>
-        <div className='search-bar__button' onClick={handleRefresh}>
-          Refresh Page
-        </div>
+        <Button onClickType={toggleSearch} buttonText='Book Finder' />
+        <h2 className='book-list__heading'>
+          Warhammer 30K Book Series Library
+        </h2>
+        <Button onClickType={refreshPage} buttonText='Refresh Page' />
       </div>
       <div className='book-list__cont'>
         {filteredBooks &&

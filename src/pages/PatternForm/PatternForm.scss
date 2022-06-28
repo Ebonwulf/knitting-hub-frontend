@@ -3,7 +3,7 @@
 .form-page {
   background-image: url(../../assets/images/knit-pattern.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 89vh;
   padding-top: 5rem;
 }
 
@@ -12,19 +12,17 @@
   min-width: 320px;
   max-width: 475px;
   background: rgb(253, 253, 253);
-  margin: 1rem auto;
+  margin: 47rem auto;
   border: 1px solid darken(grey, 5%);
   border-radius: 30px;
+  padding: 0;
+  border: 1px solid $accent-color;
 
   &__heading {
-    width: 100%;
     color: black;
+    padding: 1rem;
     font-size: 1.6em;
-    display: block;
     background: $secondary-color;
-    width: 100%;
-    padding: 0.75em 1em 0.75em 1.5em;
-    margin: 0;
     border: 1px solid $accent-color;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -36,6 +34,7 @@
     border: 1px solid black;
     padding: 0.5em 2em;
     margin-right: 0.5em;
+    margin-bottom: 1.5rem;
     font-size: 18px;
     border-radius: 5px;
     &:hover {
@@ -49,10 +48,10 @@
 
   &__dropdown {
     display: block;
-    margin: auto auto;
+    margin: auto 0.5rem;
     width: 100%;
     margin-bottom: 2em;
-    padding: 0.5em 0;
+    padding: 0.5rem 0;
     color: $form-detail;
     border: none;
     border-bottom: 1px solid #acacac;
@@ -60,18 +59,11 @@
   }
 }
 
-form {
-  display: block;
-  width: 100%;
-  padding: 2em;
-}
-
 input {
   display: block;
-  margin: auto auto;
   width: 100%;
   margin-bottom: 2em;
-  padding: 0.5em 0;
+  padding: 0.5rem 0.5rem;
   border: none;
   border-bottom: 1px solid #acacac;
   padding-bottom: 1.25em;
@@ -86,6 +78,6 @@ textarea {
   margin: auto auto;
   width: 100%;
   margin-bottom: 2em;
-  padding: 0.5em 0;
+  padding: 0.5rem 0;
   color: $form-detail;
 }

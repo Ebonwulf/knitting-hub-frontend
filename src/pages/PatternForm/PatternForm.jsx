@@ -30,94 +30,90 @@ const PatternForm = () => {
   };
   return (
     <div className='form-page'>
-      <div className='form'>
+      <form className='form' onSubmit={handleSubmit}>
         <h2 className='form__heading'>Add a new pattern</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type='text'
-            placeholder='pattern name'
-            onInput={(e) =>
-              setPattern({ ...pattern, patternName: e.target.value })
+        <input
+          type='text'
+          placeholder='pattern name'
+          onInput={(e) =>
+            setPattern({ ...pattern, patternName: e.target.value })
+          }
+        />
+        <select className='form__dropdown'>
+          <option>Pattern type</option>
+          <option
+            value='Knitting'
+            onSelect={(e) =>
+              setPattern({ ...pattern, patternType: e.target.value })
             }
-          />
-          <select className='form__dropdown'>
-            <option>Pattern type</option>
-            <option
-              value='Knitting'
-              onSelect={(e) =>
-                setPattern({ ...pattern, patternType: e.target.value })
-              }
-            >
-              Knitting
-            </option>
-            <option
-              value='Crochet'
-              onSelect={(e) =>
-                setPattern({ ...pattern, patternType: e.target.value })
-              }
-            >
-              Crochet
-            </option>
-          </select>
-          <select className='form__dropdown'>
-            <option>Difficulty</option>
-            <option
-              value='Beginner'
-              onSelect={(e) =>
-                setPattern({ ...pattern, patternDifficulty: e.target.value })
-              }
-            >
-              Beginner
-            </option>
-            <option
-              value='Intermediate'
-              onSelect={(e) =>
-                setPattern({ ...pattern, patternDifficulty: e.target.value })
-              }
-            >
-              Intermediate
-            </option>
-            <option
-              value='Expert'
-              onSelect={(e) =>
-                setPattern({ ...pattern, patternDifficulty: e.target.value })
-              }
-            >
-              Expert
-            </option>
-          </select>
+          >
+            Knitting
+          </option>
+          <option
+            value='Crochet'
+            onSelect={(e) =>
+              setPattern({ ...pattern, patternType: e.target.value })
+            }
+          >
+            Crochet
+          </option>
+        </select>
+        <select className='form__dropdown'>
+          <option>Difficulty</option>
+          <option
+            value='Beginner'
+            onSelect={(e) =>
+              setPattern({ ...pattern, patternDifficulty: e.target.value })
+            }
+          >
+            Beginner
+          </option>
+          <option
+            value='Intermediate'
+            onSelect={(e) =>
+              setPattern({ ...pattern, patternDifficulty: e.target.value })
+            }
+          >
+            Intermediate
+          </option>
+          <option
+            value='Expert'
+            onSelect={(e) =>
+              setPattern({ ...pattern, patternDifficulty: e.target.value })
+            }
+          >
+            Expert
+          </option>
+        </select>
 
-          <input
-            type='text'
-            placeholder='wool type'
-            onInput={(e) =>
-              setPattern({ ...pattern, woolType: e.target.value })
-            }
-          />
-          <input
-            type='text'
-            placeholder='needle size'
-            onInput={(e) =>
-              setPattern({ ...pattern, needleSize: e.target.value })
-            }
-          />
-          <input
-            type='text'
-            placeholder='pattern description'
-            onInput={(e) =>
-              setPattern({ ...pattern, patternDescription: e.target.value })
-            }
-          />
-          <textarea
-            type='text'
-            placeholder='pattern'
-            onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}
-          />
-          <button type='submit' className='form__form-button'>
-            Submit
-          </button>
-        </form>
-      </div>
+        <input
+          type='text'
+          placeholder='wool type'
+          onInput={(e) => setPattern({ ...pattern, woolType: e.target.value })}
+        />
+        <input
+          type='text'
+          placeholder='needle size'
+          onInput={(e) =>
+            setPattern({ ...pattern, needleSize: e.target.value })
+          }
+        />
+        <input
+          type='text'
+          placeholder='pattern description'
+          onInput={(e) =>
+            setPattern({ ...pattern, patternDescription: e.target.value })
+          }
+        />
+        <textarea
+          type='text'
+          placeholder='pattern'
+          onInput={(e) => setPattern({ ...pattern, pattern: e.target.value })}
+        />
+        <button type='submit' className='form__form-button'>
+          Submit
+        </button>
+      </form>
     </div>
   );
 };

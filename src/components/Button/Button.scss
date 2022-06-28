@@ -8,9 +8,10 @@
   background-color: $secondary-color;
   margin-left: 3rem;
   cursor: pointer;
-  width: 3.2rem;
+  width: auto;
   height: 2rem;
   text-align: center;
+  text-decoration: none;
 }
 .button:hover {
   transform: translateY(-1px);

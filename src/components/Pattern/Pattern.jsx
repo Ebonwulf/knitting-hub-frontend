@@ -60,7 +60,7 @@ const Pattern = ({
         <p>Description: {patternDescription}</p>
         <div className='pattern__link-div'>
           <Link to='/pattern-page'>Go to pattern</Link>
-          <Button onClickType={handleDelete} buttonText='Del' />
+          <Button onClickType={handleDelete} buttonText='Delete' />
           <Button onClickType={toggleUpdateBox} buttonText='Update' />
         </div>
       </div>

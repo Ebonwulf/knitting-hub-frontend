@@ -28,41 +28,37 @@ const BookForm = () => {
   };
   return (
     <div className='book-form-page'>
-      <div className='form'>
+      <form className='form' onSubmit={handleSubmit}>
         <h2 className='form__heading'>Add a new book</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type='text'
-            placeholder='book title'
-            onInput={(e) => setBook({ ...book, bookTitle: e.target.value })}
-          />
-          <input
-            type='text'
-            placeholder='book genre'
-            onInput={(e) => setBook({ ...book, bookGenre: e.target.value })}
-          />
-          <input
-            type='text'
-            placeholder='book author'
-            onInput={(e) => setBook({ ...book, bookAuthor: e.target.value })}
-          />
-          <input
-            type='text'
-            placeholder='brief description'
-            onInput={(e) =>
-              setBook({ ...book, bookDescription: e.target.value })
-            }
-          />
-          <textarea
-            type='text'
-            placeholder='Blurb'
-            onInput={(e) => setBook({ ...book, bookBlurb: e.target.value })}
-          />
-          <button type='submit' className='form__form-button'>
-            Submit
-          </button>
-        </form>
-      </div>
+        <input
+          type='text'
+          placeholder='book title'
+          onInput={(e) => setBook({ ...book, bookTitle: e.target.value })}
+        />
+        <input
+          type='text'
+          placeholder='book genre'
+          onInput={(e) => setBook({ ...book, bookGenre: e.target.value })}
+        />
+        <input
+          type='text'
+          placeholder='book author'
+          onInput={(e) => setBook({ ...book, bookAuthor: e.target.value })}
+        />
+        <input
+          type='text'
+          placeholder='brief description'
+          onInput={(e) => setBook({ ...book, bookDescription: e.target.value })}
+        />
+        <textarea
+          type='text'
+          placeholder='Blurb'
+          onInput={(e) => setBook({ ...book, bookBlurb: e.target.value })}
+        />
+        <button type='submit' className='form__form-button'>
+          Submit
+        </button>
+      </form>
     </div>
   );
 };

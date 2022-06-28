@@ -14,25 +14,6 @@
   z-index: 5;
   padding-top: 5rem;
 
-  &__back-button {
-    font-size: 1.6em;
-    background-color: $secondary-color;
-    border: 2px solid $accent-color;
-    border-radius: 6px;
-    margin: 1rem 8.5rem;
-    width: 10rem;
-  }
-
-  &__back-button:hover {
-    cursor: pointer;
-    transform: translateY(-1px);
-    box-shadow: 0 5px 5px $shadow-color;
-  }
-  &__back-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 5px 5px $shadow-color;
-  }
-
   &__form {
     background-color: $main-color;
     border-radius: 5px;

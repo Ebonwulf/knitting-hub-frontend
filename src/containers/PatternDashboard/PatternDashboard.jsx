@@ -57,6 +57,7 @@ const PatternDashboard = ({ refreshPage }) => {
                 filteredPatterns={filteredPatterns}
                 searchTextHandler={searchTextHandler}
                 searchResultCount={filteredPatterns.length}
+                refreshPage={refreshPage}
               />
             }
           />

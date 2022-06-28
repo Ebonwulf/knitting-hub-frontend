@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import './FullDescription.scss';
 
 const FullDescription = ({
@@ -14,9 +15,7 @@ const FullDescription = ({
         <h3>{bookAuthor}</h3>
         <h4>{bookDescription}</h4>
         <p>{bookBlurb}</p>
-        <button className='description__back-button' onClick={toggleDetails}>
-          Back
-        </button>
+        <Button onClickType={toggleDetails} buttonText='Back' />
       </div>
     </section>
   );

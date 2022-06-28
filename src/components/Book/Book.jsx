@@ -1,6 +1,7 @@
 import './Book.scss';
 import FullDescription from '../FullDescription/FullDescription';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Button from '../Button/Button';
 
 const Book = ({
   bookId,
@@ -38,26 +39,25 @@ const Book = ({
 
   return (
     <div className='book'>
-      <div className='book__btn-container'>
-        <h2>{bookTitle}</h2>
-        <button onClick={handleDelete} className='book__btn'>
-          Del
-        </button>
-      </div>
+      <h2>{bookTitle}</h2>
       <h4>Author: {bookAuthor}</h4>
       <h4>Genre: {bookGenre}</h4>
       <p>Description: {bookDescription}</p>
-      <div className='book__link' onClick={toggleDetails}>
-        Go to full book description
-        {showDetails && (
-          <FullDescription
-            toggleDetails={toggleDetails}
-            bookAuthor={bookAuthor}
-            bookBlurb={bookBlurb}
-            bookTitle={bookTitle}
-            bookDescription={bookDescription}
-          />
-        )}
+      <div className='book__btn-box'>
+        <div className='book__link' onClick={toggleDetails}>
+          Go to full book description
+          {showDetails && (
+            <FullDescription
+              toggleDetails={toggleDetails}
+              bookAuthor={bookAuthor}
+              bookBlurb={bookBlurb}
+              bookTitle={bookTitle}
+              bookDescription={bookDescription}
+            />
+          )}
+        </div>
+        <Button onClickType={handleDelete} buttonText='Delete' />
+        <Button buttonText='Update' />
       </div>
     </div>
   );

@@ -12,16 +12,12 @@ function App() {
     switch (window.location.pathname) {
       case '/knitting-hub-frontend/':
         return <Dashboard refreshPage={refreshPage} />;
-      case '/knitting-hub-frontend/book-hub':
-        return <BookDashboard refreshPage={refreshPage} />;
       case '/knitting-hub-frontend/books':
         return <BookDashboard refreshPage={refreshPage} />;
       case '/knitting-hub-frontend/new-book':
         return <BookDashboard />;
       case '/knitting-hub-frontend/description-page':
         return <BookDashboard refreshPage={refreshPage} />;
-      case '/knitting-hub-frontend/pattern-hub':
-        return <PatternDashboard refreshPage={refreshPage} />;
       case '/knitting-hub-frontend/patterns':
         return <PatternDashboard refreshPage={refreshPage} />;
       case '/knitting-hub-frontend/new-pattern':

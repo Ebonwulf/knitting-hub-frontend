@@ -7,14 +7,14 @@ const Home = ({ refreshPage }) => {
       <div className='home'>
         <Link
           className='home__page home__knit-page'
-          to='pattern-hub'
+          to='/patterns'
           onClick={refreshPage}
         >
           Knitting library
         </Link>
         <Link
           className='home__page home__book-page'
-          to='/book-hub'
+          to='/books'
           onClick={refreshPage}
         >
           Warhammer 30K book series

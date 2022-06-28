@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import BookList from '../../pages/BookList/BookList';
 import BookForm from '../../pages/BookForm/BookForm';
-import BookHub from '../../pages/BookHub/BookHub';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LibraryNavBar from '../../components/LibraryNavBar/LibraryNavBar.jsx';
 
@@ -42,16 +41,13 @@ const BookDashboard = ({ refreshPage }) => {
       <Router basename={process.env.PUBLIC_URL}>
         <LibraryNavBar
           refreshPage={refreshPage}
-          hubName='Books Home'
           libraryName='Books'
           addPage='Add Book'
           homePath='/'
           libraryPath='/books'
-          hubPath='/book-hub'
           addPath='/new-book'
         />
         <Routes>
-          <Route path='/book-hub' element={<BookHub />} />
           <Route
             path='/books'
             element={

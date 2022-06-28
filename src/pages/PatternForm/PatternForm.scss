@@ -12,7 +12,8 @@
   min-width: 320px;
   max-width: 475px;
   background: rgb(253, 253, 253);
-  margin: 47rem auto;
+  margin: 0 auto;
+  margin-top: 2rem;
   border: 1px solid darken(grey, 5%);
   border-radius: 30px;
   padding: 0;
@@ -23,7 +24,7 @@
     padding: 1rem;
     font-size: 1.6em;
     background: $secondary-color;
-    border: 1px solid $accent-color;
+    border-bottom: 1px solid $accent-color;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
   }

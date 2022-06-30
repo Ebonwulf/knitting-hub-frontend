@@ -23,7 +23,7 @@ const UpdatePattern = ({
     pattern: { pattern },
   });
 
-  const UpdatePattern = (e) => {
+  const updatePattern = (e) => {
     e.preventDefault();
     fetch(
       'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/pattern/' +
@@ -42,7 +42,7 @@ const UpdatePattern = ({
 
   return (
     <div className='update-form'>
-      <form className='form' onSubmit={UpdatePattern}>
+      <form className='form' onSubmit={updatePattern}>
         <input
           type='text'
           placeholder='pattern name'

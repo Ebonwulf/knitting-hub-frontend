@@ -2,6 +2,7 @@ import './Book.scss';
 import FullDescription from '../FullDescription/FullDescription';
 import React, { useState } from 'react';
 import Button from '../Button/Button';
+import UpdateBook from '../UpdateBook/UpdateBook';
 
 const Book = ({
   bookId,
@@ -13,6 +14,7 @@ const Book = ({
   refreshPage,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
+  const [showUpdateBox, setShowUpdateBox] = useState(false);
 
   const handleDelete = () => {
     fetch(
@@ -32,6 +34,10 @@ const Book = ({
     refreshPage();
   };
 
+  const toggleUpdateBox = () => {
+    setShowUpdateBox(!showUpdateBox);
+  };
+
   const toggleDetails = () => {
     console.log(showDetails);
     setShowDetails(!showDetails);
@@ -39,6 +45,17 @@ const Book = ({
 
   return (
     <div className='book'>
+      {showUpdateBox && (
+        <UpdateBook
+          bookId={bookId}
+          bookAuthor={bookAuthor}
+          bookBlurb={bookBlurb}
+          bookTitle={bookTitle}
+          bookDescription={bookDescription}
+          bookGenre={bookGenre}
+          toggleUpdateBox={toggleUpdateBox}
+        />
+      )}
       <h2>{bookTitle}</h2>
       <h4>Author: {bookAuthor}</h4>
       <h4>Genre: {bookGenre}</h4>
@@ -57,7 +74,7 @@ const Book = ({
           )}
         </div>
         <Button onClickType={handleDelete} buttonText='Delete' />
-        <Button buttonText='Update' />
+        <Button onClickType={toggleUpdateBox} buttonText='Update' />
       </div>
     </div>
   );

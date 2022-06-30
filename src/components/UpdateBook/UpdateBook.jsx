@@ -23,7 +23,7 @@ const UpdateBook = ({
   const updateBook = (e) => {
     e.preventDefault();
     fetch(
-      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/book/' +
+      'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/books/' +
         bookId,
       {
         method: 'PUT',
@@ -39,10 +39,11 @@ const UpdateBook = ({
   return (
     <div className='update-form'>
       <form className='form' onSubmit={updateBook}>
-        <h2 className='form__heading'>Add a new book</h2>
+        <h2 className='form__heading'>Update the book</h2>
         <input
           type='text'
           placeholder='book title'
+          defaultValue={bookTitle}
           onInput={(e) =>
             setBookUpdate({ ...bookUpdate, bookTitle: e.target.value })
           }
@@ -50,6 +51,7 @@ const UpdateBook = ({
         <input
           type='text'
           placeholder='book genre'
+          defaultValue={bookGenre}
           onInput={(e) =>
             setBookUpdate({ ...bookUpdate, bookGenre: e.target.value })
           }
@@ -57,6 +59,7 @@ const UpdateBook = ({
         <input
           type='text'
           placeholder='book author'
+          defaultValue={bookAuthor}
           onInput={(e) =>
             setBookUpdate({ ...bookUpdate, bookAuthor: e.target.value })
           }
@@ -64,6 +67,7 @@ const UpdateBook = ({
         <input
           type='text'
           placeholder='brief description'
+          defaultValue={bookDescription}
           onInput={(e) =>
             setBookUpdate({ ...bookUpdate, bookDescription: e.target.value })
           }
@@ -71,14 +75,15 @@ const UpdateBook = ({
         <textarea
           type='text'
           placeholder='Blurb'
+          defaultValue={bookBlurb}
           onInput={(e) =>
             setBookUpdate({ ...bookUpdate, bookBlurb: e.target.value })
           }
         />
         <div className='update-form__btns-div'>
           <Button onClickType={toggleUpdateBox} buttonText='Back' />
-          <button type='submit' className='form__form-button'>
-            Submit
+          <button type='submit' className='update-form__button'>
+            Update
           </button>
         </div>
       </form>

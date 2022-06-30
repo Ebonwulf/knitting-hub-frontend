@@ -43,6 +43,7 @@ const UpdatePattern = ({
   return (
     <div className='update-form'>
       <form className='form' onSubmit={updatePattern}>
+        <h2 className='form__heading'>Update the pattern</h2>
         <input
           type='text'
           placeholder='pattern name'

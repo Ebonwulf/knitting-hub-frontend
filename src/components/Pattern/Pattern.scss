@@ -34,4 +34,9 @@
   &__link-div {
     display: flex;
   }
+  &__link {
+    cursor: pointer;
+    text-decoration: underline;
+    display: flex;
+  }
 }

@@ -1,8 +1,8 @@
 import './Pattern.scss';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import UpdatePattern from '../UpdatePattern/UpdatePattern';
 import Button from '../../components/Button/Button';
+import FullPattern from '../FullPattern/FullPattern';
 
 const Pattern = ({
   patternId,
@@ -15,6 +15,7 @@ const Pattern = ({
   pattern,
 }) => {
   const [showUpdateBox, setShowUpdateBox] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
   const handleDelete = () => {
     fetch(
       'https://wolfs-knitting-hub-5h356xxfoq-nw.a.run.app/knitting-hub-frontend/pattern/' +
@@ -34,6 +35,11 @@ const Pattern = ({
 
   const toggleUpdateBox = () => {
     setShowUpdateBox(!showUpdateBox);
+  };
+
+  const toggleDetails = () => {
+    console.log(showDetails);
+    setShowDetails(!showDetails);
   };
 
   return (
@@ -59,7 +65,21 @@ const Pattern = ({
         <h6>Needle/hook size: {needleSize}</h6>
         <p>Description: {patternDescription}</p>
         <div className='pattern__link-div'>
-          <Link to='/pattern-page'>Go to pattern</Link>
+          <div className='pattern__link' onClick={toggleDetails}>
+            Go to pattern
+            {showDetails && (
+              <FullPattern
+                toggleDetails={toggleDetails}
+                pattern={pattern}
+                patternDescription={patternDescription}
+                patternName={patternName}
+                patternDifficulty={patternDifficulty}
+                patternType={patternType}
+                woolType={woolType}
+                needleSize={needleSize}
+              />
+            )}
+          </div>
           <Button onClickType={handleDelete} buttonText='Delete' />
           <Button onClickType={toggleUpdateBox} buttonText='Update' />
         </div>

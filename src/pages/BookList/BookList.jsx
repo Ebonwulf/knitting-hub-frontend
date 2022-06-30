@@ -24,11 +24,14 @@ const BookList = ({
             itemName='Search by book title'
           />
         )}
-        <Button onClickType={toggleSearch} buttonText='Book Finder' />
+
         <h2 className='book-list__heading'>
           Warhammer 30K Book Series Library
         </h2>
-        <Button onClickType={refreshPage} buttonText='Refresh Page' />
+        <div className='book-list__buttons'>
+          <Button onClickType={toggleSearch} buttonText='Book Finder' />
+          <Button onClickType={refreshPage} buttonText='Refresh Page' />
+        </div>
       </div>
       <div className='book-list__cont'>
         {filteredBooks &&
